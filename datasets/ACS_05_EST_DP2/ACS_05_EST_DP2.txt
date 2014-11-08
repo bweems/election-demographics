@@ -1,0 +1,107 @@
+DP02
+Selected Social Characteristics in the United States: 2005
+
+NOTE. Data are limited to the household population and exclude
+the population living in institutions, college dormitories, and
+other group quarters.  For information on confidentiality
+protection, sampling error, nonsampling error, and definitions, see
+Survey Methodology.
+
+
+
+Source: U.S. Census Bureau, 2005 American Community Survey
+
+
+
+Data are based on a sample and are subject to sampling
+variability. The degree of uncertainty for an estimate arising from
+sampling variability is represented through the use of a margin of
+error. The value shown here is the 90 percent margin of error.  The
+margin of error can be interpreted roughly as providing a 90
+percent probability that the interval defined by the estimate minus
+the margin of error and the estimate plus the margin of error (the
+lower and upper confidence bounds) contains the true value.  In
+addition to sampling variability, the ACS estimates are subject to
+nonsampling error (for a discussion of nonsampling variability,
+see Accuracy of the Data).
+The effect of nonsampling error is not represented in these tables.
+
+
+Notes:
+
+
+
+ Ancestry listed in this table refers to the total number
+of people who responded with a particular ancestry; for example,
+the estimate given for Russian represents the number of people who
+listed Russian as either their first or second ancestry. This table
+lists only the largest ancestry groups; see the Detailed Tables for
+more categories. Race and Hispanic origin groups are not included
+in this table because official data for those groups come from the
+Race and Hispanic origin questions rather than the ancestry
+question (see Demographic Table).
+
+
+
+
+ The Census Bureau introduced a new skip pattern for the
+disability questions in the 2003 ACS questionnaire.  This change
+mainly affected two individual items -- go-outside-home disability
+and employment disability -- and the recode for disability status,
+which includes the two items. Accordingly, comparisons of data from
+2003 or later with data from prior years are not recommended for
+the relevant questions. For more information, see the
+
+ACS Subject Definitions for Disability.
+
+
+
+ Data for year of entry of the native population reflect
+the year of entry into the U.S. by people who were born in Puerto
+Rico, U.S. Island Areas or born outside the U.S. to a U.S. citizen
+parent and who subsequently moved to the U.S.
+
+
+
+Explanation of Symbols:
+
+1. An '*' entry in the margin of error column indicates that too
+few sample observations were available to compute a standard error
+and thus the margin of error. A statistical test is not
+appropriate.
+
+2. An '**' entry in the margin of error column indicates that no
+sample observations were available to compute a standard error and
+thus the margin of error. A statistical test is not appropriate.
+
+3. An '-' entry in the estimate column indicates that no sample
+observations were available to compute an estimate, or a ratio of
+medians cannot be calculated because one or both of the median
+estimates falls in the lowest interval or upper interval of an
+open-ended distribution.
+
+4. An '-' following a median estimate means the median falls in
+the lowest interval of an open-ended distribution.
+
+5. An '+' following a median estimate means the median falls in
+the upper interval of an open-ended distribution.
+
+6. An '***' entry in the margin of error column indicates that
+the median falls in the lowest interval or upper interval of an
+open-ended distribution. A statistical test is not appropriate.
+
+7. An '*****' entry in the margin of error column indicates that
+the estimate is controlled. A statistical test for sampling
+variability is not appropriate.
+
+
+
+8. An 'N' entry in the estimate and margin of error columns
+indicates that data for this geographic area cannot be displayed
+because the number of sample cases is too small.
+
+9. An '(X)' means that the estimate is not applicable or not
+available.
+
+
+
