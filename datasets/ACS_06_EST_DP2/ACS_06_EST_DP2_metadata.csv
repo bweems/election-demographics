@@ -1,0 +1,299 @@
+GEO.id,Id
+GEO.id2,Id2
+GEO.display-label,Geography
+EST_VC02,Estimate; HOUSEHOLDS BY TYPE - Total households
+MOE_VC02,Margin of Error; HOUSEHOLDS BY TYPE - Total households
+EST_VC03,Estimate; HOUSEHOLDS BY TYPE - Total households - Family households (families)
+MOE_VC03,Margin of Error; HOUSEHOLDS BY TYPE - Total households - Family households (families)
+EST_VC04,Estimate; HOUSEHOLDS BY TYPE - Total households - Family households (families) - With own children under 18 years
+MOE_VC04,Margin of Error; HOUSEHOLDS BY TYPE - Total households - Family households (families) - With own children under 18 years
+EST_VC05,Estimate; HOUSEHOLDS BY TYPE - Total households - Married-couple families
+MOE_VC05,Margin of Error; HOUSEHOLDS BY TYPE - Total households - Married-couple families
+EST_VC06,Estimate; HOUSEHOLDS BY TYPE - Total households - Married-couple families - With own children under 18 years
+MOE_VC06,Margin of Error; HOUSEHOLDS BY TYPE - Total households - Married-couple families - With own children under 18 years
+EST_VC07,"Estimate; HOUSEHOLDS BY TYPE - Total households - Male householder, no wife present"
+MOE_VC07,"Margin of Error; HOUSEHOLDS BY TYPE - Total households - Male householder, no wife present"
+EST_VC08,"Estimate; HOUSEHOLDS BY TYPE - Total households - Male householder, no wife present - With own children under 18 years"
+MOE_VC08,"Margin of Error; HOUSEHOLDS BY TYPE - Total households - Male householder, no wife present - With own children under 18 years"
+EST_VC09,"Estimate; HOUSEHOLDS BY TYPE - Total households - Female householder, no husband present"
+MOE_VC09,"Margin of Error; HOUSEHOLDS BY TYPE - Total households - Female householder, no husband present"
+EST_VC10,"Estimate; HOUSEHOLDS BY TYPE - Total households - Female householder, no husband present - With own children under 18 years"
+MOE_VC10,"Margin of Error; HOUSEHOLDS BY TYPE - Total households - Female householder, no husband present - With own children under 18 years"
+EST_VC11,Estimate; HOUSEHOLDS BY TYPE - Total households - Nonfamily households
+MOE_VC11,Margin of Error; HOUSEHOLDS BY TYPE - Total households - Nonfamily households
+EST_VC12,Estimate; HOUSEHOLDS BY TYPE - Total households - Nonfamily households - Householder living alone
+MOE_VC12,Margin of Error; HOUSEHOLDS BY TYPE - Total households - Nonfamily households - Householder living alone
+EST_VC13,Estimate; HOUSEHOLDS BY TYPE - Total households - Nonfamily households - Householder living alone - 65 years and over
+MOE_VC13,Margin of Error; HOUSEHOLDS BY TYPE - Total households - Nonfamily households - Householder living alone - 65 years and over
+EST_VC14,Estimate; HOUSEHOLDS BY TYPE - Total households - Households with one or more people under 18 years
+MOE_VC14,Margin of Error; HOUSEHOLDS BY TYPE - Total households - Households with one or more people under 18 years
+EST_VC15,Estimate; HOUSEHOLDS BY TYPE - Total households - Households with one or more people 65 years and over
+MOE_VC15,Margin of Error; HOUSEHOLDS BY TYPE - Total households - Households with one or more people 65 years and over
+EST_VC16,Estimate; HOUSEHOLDS BY TYPE - Total households - Average household size
+MOE_VC16,Margin of Error; HOUSEHOLDS BY TYPE - Total households - Average household size
+EST_VC17,Estimate; HOUSEHOLDS BY TYPE - Total households - Average family size
+MOE_VC17,Margin of Error; HOUSEHOLDS BY TYPE - Total households - Average family size
+EST_VC19,Estimate; RELATIONSHIP - Household population
+MOE_VC19,Margin of Error; RELATIONSHIP - Household population
+EST_VC20,Estimate; RELATIONSHIP - Household population - Householder
+MOE_VC20,Margin of Error; RELATIONSHIP - Household population - Householder
+EST_VC21,Estimate; RELATIONSHIP - Household population - Spouse
+MOE_VC21,Margin of Error; RELATIONSHIP - Household population - Spouse
+EST_VC22,Estimate; RELATIONSHIP - Household population - Child
+MOE_VC22,Margin of Error; RELATIONSHIP - Household population - Child
+EST_VC23,Estimate; RELATIONSHIP - Household population - Other relatives
+MOE_VC23,Margin of Error; RELATIONSHIP - Household population - Other relatives
+EST_VC24,Estimate; RELATIONSHIP - Household population - Nonrelatives
+MOE_VC24,Margin of Error; RELATIONSHIP - Household population - Nonrelatives
+EST_VC25,Estimate; RELATIONSHIP - Household population - Nonrelatives - Unmarried partner
+MOE_VC25,Margin of Error; RELATIONSHIP - Household population - Nonrelatives - Unmarried partner
+EST_VC27,Estimate; MARITAL STATUS - Males 15 years and over
+MOE_VC27,Margin of Error; MARITAL STATUS - Males 15 years and over
+EST_VC28,Estimate; MARITAL STATUS - Males 15 years and over - Never married
+MOE_VC28,Margin of Error; MARITAL STATUS - Males 15 years and over - Never married
+EST_VC29,"Estimate; MARITAL STATUS - Males 15 years and over - Now married, except separated"
+MOE_VC29,"Margin of Error; MARITAL STATUS - Males 15 years and over - Now married, except separated"
+EST_VC30,Estimate; MARITAL STATUS - Males 15 years and over - Separated
+MOE_VC30,Margin of Error; MARITAL STATUS - Males 15 years and over - Separated
+EST_VC31,Estimate; MARITAL STATUS - Males 15 years and over - Widowed
+MOE_VC31,Margin of Error; MARITAL STATUS - Males 15 years and over - Widowed
+EST_VC32,Estimate; MARITAL STATUS - Males 15 years and over - Divorced
+MOE_VC32,Margin of Error; MARITAL STATUS - Males 15 years and over - Divorced
+EST_VC33,Estimate; MARITAL STATUS - Females 15 years and over
+MOE_VC33,Margin of Error; MARITAL STATUS - Females 15 years and over
+EST_VC34,Estimate; MARITAL STATUS - Females 15 years and over - Never married
+MOE_VC34,Margin of Error; MARITAL STATUS - Females 15 years and over - Never married
+EST_VC35,"Estimate; MARITAL STATUS - Females 15 years and over - Now married, except separated"
+MOE_VC35,"Margin of Error; MARITAL STATUS - Females 15 years and over - Now married, except separated"
+EST_VC36,Estimate; MARITAL STATUS - Females 15 years and over - Separated
+MOE_VC36,Margin of Error; MARITAL STATUS - Females 15 years and over - Separated
+EST_VC37,Estimate; MARITAL STATUS - Females 15 years and over - Widowed
+MOE_VC37,Margin of Error; MARITAL STATUS - Females 15 years and over - Widowed
+EST_VC38,Estimate; MARITAL STATUS - Females 15 years and over - Divorced
+MOE_VC38,Margin of Error; MARITAL STATUS - Females 15 years and over - Divorced
+EST_VC40,Estimate; FERTILITY - Number of women 15 to 50 years old who had a birth in the past 12 months
+MOE_VC40,Margin of Error; FERTILITY - Number of women 15 to 50 years old who had a birth in the past 12 months
+EST_VC41,"Estimate; FERTILITY - Number of women 15 to 50 years old who had a birth in the past 12 months - Unmarried women (widowed, divorced, and never married)"
+MOE_VC41,"Margin of Error; FERTILITY - Number of women 15 to 50 years old who had a birth in the past 12 months - Unmarried women (widowed, divorced, and never married)"
+EST_VC42,"Estimate; FERTILITY - Number of women 15 to 50 years old who had a birth in the past 12 months - Unmarried women (widowed, divorced, and never married) - Per 1,000 unmarried women"
+MOE_VC42,"Margin of Error; FERTILITY - Number of women 15 to 50 years old who had a birth in the past 12 months - Unmarried women (widowed, divorced, and never married) - Per 1,000 unmarried women"
+EST_VC43,"Estimate; FERTILITY - Number of women 15 to 50 years old who had a birth in the past 12 months - Per 1,000 women 15 to 50 years old"
+MOE_VC43,"Margin of Error; FERTILITY - Number of women 15 to 50 years old who had a birth in the past 12 months - Per 1,000 women 15 to 50 years old"
+EST_VC44,"Estimate; FERTILITY - Number of women 15 to 50 years old who had a birth in the past 12 months - Per 1,000 women 15 to 19 years old"
+MOE_VC44,"Margin of Error; FERTILITY - Number of women 15 to 50 years old who had a birth in the past 12 months - Per 1,000 women 15 to 19 years old"
+EST_VC45,"Estimate; FERTILITY - Number of women 15 to 50 years old who had a birth in the past 12 months - Per 1,000 women 20 to 34 years old"
+MOE_VC45,"Margin of Error; FERTILITY - Number of women 15 to 50 years old who had a birth in the past 12 months - Per 1,000 women 20 to 34 years old"
+EST_VC46,"Estimate; FERTILITY - Number of women 15 to 50 years old who had a birth in the past 12 months - Per 1,000 women 35 to 50 years old"
+MOE_VC46,"Margin of Error; FERTILITY - Number of women 15 to 50 years old who had a birth in the past 12 months - Per 1,000 women 35 to 50 years old"
+EST_VC48,Estimate; GRANDPARENTS - Number of grandparents living with own grandchildren under 18 years
+MOE_VC48,Margin of Error; GRANDPARENTS - Number of grandparents living with own grandchildren under 18 years
+EST_VC49,Estimate; GRANDPARENTS - Number of grandparents living with own grandchildren under 18 years - Responsible for grandchildren
+MOE_VC49,Margin of Error; GRANDPARENTS - Number of grandparents living with own grandchildren under 18 years - Responsible for grandchildren
+EST_VC51,Estimate; GRANDPARENTS - Number of grandparents living with own grandchildren under 18 years - Years responsible for grandchildren - Less than 1 year
+MOE_VC51,Margin of Error; GRANDPARENTS - Number of grandparents living with own grandchildren under 18 years - Years responsible for grandchildren - Less than 1 year
+EST_VC52,Estimate; GRANDPARENTS - Number of grandparents living with own grandchildren under 18 years - Years responsible for grandchildren - 1 or 2 years
+MOE_VC52,Margin of Error; GRANDPARENTS - Number of grandparents living with own grandchildren under 18 years - Years responsible for grandchildren - 1 or 2 years
+EST_VC53,Estimate; GRANDPARENTS - Number of grandparents living with own grandchildren under 18 years - Years responsible for grandchildren - 3 or 4 years
+MOE_VC53,Margin of Error; GRANDPARENTS - Number of grandparents living with own grandchildren under 18 years - Years responsible for grandchildren - 3 or 4 years
+EST_VC54,Estimate; GRANDPARENTS - Number of grandparents living with own grandchildren under 18 years - Years responsible for grandchildren - 5 or more years
+MOE_VC54,Margin of Error; GRANDPARENTS - Number of grandparents living with own grandchildren under 18 years - Years responsible for grandchildren - 5 or more years
+EST_VC56,Estimate; GRANDPARENTS - Characteristics of grandparents responsible for own grandchildren under 18 years - Who are female
+MOE_VC56,Margin of Error; GRANDPARENTS - Characteristics of grandparents responsible for own grandchildren under 18 years - Who are female
+EST_VC57,Estimate; GRANDPARENTS - Characteristics of grandparents responsible for own grandchildren under 18 years - Who are married
+MOE_VC57,Margin of Error; GRANDPARENTS - Characteristics of grandparents responsible for own grandchildren under 18 years - Who are married
+EST_VC59,Estimate; SCHOOL ENROLLMENT - Population 3 years and over enrolled in school
+MOE_VC59,Margin of Error; SCHOOL ENROLLMENT - Population 3 years and over enrolled in school
+EST_VC60,"Estimate; SCHOOL ENROLLMENT - Population 3 years and over enrolled in school - Nursery school, preschool"
+MOE_VC60,"Margin of Error; SCHOOL ENROLLMENT - Population 3 years and over enrolled in school - Nursery school, preschool"
+EST_VC61,Estimate; SCHOOL ENROLLMENT - Population 3 years and over enrolled in school - Kindergarten
+MOE_VC61,Margin of Error; SCHOOL ENROLLMENT - Population 3 years and over enrolled in school - Kindergarten
+EST_VC62,Estimate; SCHOOL ENROLLMENT - Population 3 years and over enrolled in school - Elementary school (grades 1-8)
+MOE_VC62,Margin of Error; SCHOOL ENROLLMENT - Population 3 years and over enrolled in school - Elementary school (grades 1-8)
+EST_VC63,Estimate; SCHOOL ENROLLMENT - Population 3 years and over enrolled in school - High school (grades 9-12)
+MOE_VC63,Margin of Error; SCHOOL ENROLLMENT - Population 3 years and over enrolled in school - High school (grades 9-12)
+EST_VC64,Estimate; SCHOOL ENROLLMENT - Population 3 years and over enrolled in school - College or graduate school
+MOE_VC64,Margin of Error; SCHOOL ENROLLMENT - Population 3 years and over enrolled in school - College or graduate school
+EST_VC66,Estimate; EDUCATIONAL ATTAINMENT - Population 25 years and over
+MOE_VC66,Margin of Error; EDUCATIONAL ATTAINMENT - Population 25 years and over
+EST_VC67,Estimate; EDUCATIONAL ATTAINMENT - Population 25 years and over - Less than 9th grade
+MOE_VC67,Margin of Error; EDUCATIONAL ATTAINMENT - Population 25 years and over - Less than 9th grade
+EST_VC68,"Estimate; EDUCATIONAL ATTAINMENT - Population 25 years and over - 9th to 12th grade, no diploma"
+MOE_VC68,"Margin of Error; EDUCATIONAL ATTAINMENT - Population 25 years and over - 9th to 12th grade, no diploma"
+EST_VC69,Estimate; EDUCATIONAL ATTAINMENT - Population 25 years and over - High school graduate (includes equivalency)
+MOE_VC69,Margin of Error; EDUCATIONAL ATTAINMENT - Population 25 years and over - High school graduate (includes equivalency)
+EST_VC70,"Estimate; EDUCATIONAL ATTAINMENT - Population 25 years and over - Some college, no degree"
+MOE_VC70,"Margin of Error; EDUCATIONAL ATTAINMENT - Population 25 years and over - Some college, no degree"
+EST_VC71,Estimate; EDUCATIONAL ATTAINMENT - Population 25 years and over - Associate's degree
+MOE_VC71,Margin of Error; EDUCATIONAL ATTAINMENT - Population 25 years and over - Associate's degree
+EST_VC72,Estimate; EDUCATIONAL ATTAINMENT - Population 25 years and over - Bachelor's degree
+MOE_VC72,Margin of Error; EDUCATIONAL ATTAINMENT - Population 25 years and over - Bachelor's degree
+EST_VC73,Estimate; EDUCATIONAL ATTAINMENT - Population 25 years and over - Graduate or professional degree
+MOE_VC73,Margin of Error; EDUCATIONAL ATTAINMENT - Population 25 years and over - Graduate or professional degree
+EST_VC74,Estimate; EDUCATIONAL ATTAINMENT - Population 25 years and over - Percent high school graduate or higher
+MOE_VC74,Margin of Error; EDUCATIONAL ATTAINMENT - Population 25 years and over - Percent high school graduate or higher
+EST_VC75,Estimate; EDUCATIONAL ATTAINMENT - Population 25 years and over - Percent bachelor's degree or higher
+MOE_VC75,Margin of Error; EDUCATIONAL ATTAINMENT - Population 25 years and over - Percent bachelor's degree or higher
+EST_VC77,Estimate; VETERAN STATUS - Civilian population 18 years and over
+MOE_VC77,Margin of Error; VETERAN STATUS - Civilian population 18 years and over
+EST_VC78,Estimate; VETERAN STATUS - Civilian population 18 years and over - Civilian veterans
+MOE_VC78,Margin of Error; VETERAN STATUS - Civilian population 18 years and over - Civilian veterans
+EST_VC80,Estimate; DISABILITY STATUS OF THE CIVILIAN NONINSTITUTIONALIZED POPULATION - Population 5 years and over
+MOE_VC80,Margin of Error; DISABILITY STATUS OF THE CIVILIAN NONINSTITUTIONALIZED POPULATION - Population 5 years and over
+EST_VC81,Estimate; DISABILITY STATUS OF THE CIVILIAN NONINSTITUTIONALIZED POPULATION - Population 5 years and over - With a disability
+MOE_VC81,Margin of Error; DISABILITY STATUS OF THE CIVILIAN NONINSTITUTIONALIZED POPULATION - Population 5 years and over - With a disability
+EST_VC82,Estimate; DISABILITY STATUS OF THE CIVILIAN NONINSTITUTIONALIZED POPULATION - Population 5 to 15 years
+MOE_VC82,Margin of Error; DISABILITY STATUS OF THE CIVILIAN NONINSTITUTIONALIZED POPULATION - Population 5 to 15 years
+EST_VC83,Estimate; DISABILITY STATUS OF THE CIVILIAN NONINSTITUTIONALIZED POPULATION - Population 5 to 15 years - With a disability
+MOE_VC83,Margin of Error; DISABILITY STATUS OF THE CIVILIAN NONINSTITUTIONALIZED POPULATION - Population 5 to 15 years - With a disability
+EST_VC84,Estimate; DISABILITY STATUS OF THE CIVILIAN NONINSTITUTIONALIZED POPULATION - Population 16 to 64 years
+MOE_VC84,Margin of Error; DISABILITY STATUS OF THE CIVILIAN NONINSTITUTIONALIZED POPULATION - Population 16 to 64 years
+EST_VC85,Estimate; DISABILITY STATUS OF THE CIVILIAN NONINSTITUTIONALIZED POPULATION - Population 16 to 64 years - With a disability
+MOE_VC85,Margin of Error; DISABILITY STATUS OF THE CIVILIAN NONINSTITUTIONALIZED POPULATION - Population 16 to 64 years - With a disability
+EST_VC86,Estimate; DISABILITY STATUS OF THE CIVILIAN NONINSTITUTIONALIZED POPULATION - Population 65 years and over
+MOE_VC86,Margin of Error; DISABILITY STATUS OF THE CIVILIAN NONINSTITUTIONALIZED POPULATION - Population 65 years and over
+EST_VC87,Estimate; DISABILITY STATUS OF THE CIVILIAN NONINSTITUTIONALIZED POPULATION - Population 65 years and over - With a disability
+MOE_VC87,Margin of Error; DISABILITY STATUS OF THE CIVILIAN NONINSTITUTIONALIZED POPULATION - Population 65 years and over - With a disability
+EST_VC89,Estimate; RESIDENCE 1 YEAR AGO - Population 1 year and over
+MOE_VC89,Margin of Error; RESIDENCE 1 YEAR AGO - Population 1 year and over
+EST_VC90,Estimate; RESIDENCE 1 YEAR AGO - Population 1 year and over - Same house
+MOE_VC90,Margin of Error; RESIDENCE 1 YEAR AGO - Population 1 year and over - Same house
+EST_VC91,Estimate; RESIDENCE 1 YEAR AGO - Population 1 year and over - Different house in the U.S.
+MOE_VC91,Margin of Error; RESIDENCE 1 YEAR AGO - Population 1 year and over - Different house in the U.S.
+EST_VC92,Estimate; RESIDENCE 1 YEAR AGO - Population 1 year and over - Different house in the U.S. - Same county
+MOE_VC92,Margin of Error; RESIDENCE 1 YEAR AGO - Population 1 year and over - Different house in the U.S. - Same county
+EST_VC93,Estimate; RESIDENCE 1 YEAR AGO - Population 1 year and over - Different house in the U.S. - Different county
+MOE_VC93,Margin of Error; RESIDENCE 1 YEAR AGO - Population 1 year and over - Different house in the U.S. - Different county
+EST_VC94,Estimate; RESIDENCE 1 YEAR AGO - Population 1 year and over - Different house in the U.S. - Different county - Same state
+MOE_VC94,Margin of Error; RESIDENCE 1 YEAR AGO - Population 1 year and over - Different house in the U.S. - Different county - Same state
+EST_VC95,Estimate; RESIDENCE 1 YEAR AGO - Population 1 year and over - Different house in the U.S. - Different county - Different state
+MOE_VC95,Margin of Error; RESIDENCE 1 YEAR AGO - Population 1 year and over - Different house in the U.S. - Different county - Different state
+EST_VC96,Estimate; RESIDENCE 1 YEAR AGO - Population 1 year and over - Abroad
+MOE_VC96,Margin of Error; RESIDENCE 1 YEAR AGO - Population 1 year and over - Abroad
+EST_VC98,Estimate; PLACE OF BIRTH - Total population
+MOE_VC98,Margin of Error; PLACE OF BIRTH - Total population
+EST_VC99,Estimate; PLACE OF BIRTH - Total population - Native
+MOE_VC99,Margin of Error; PLACE OF BIRTH - Total population - Native
+EST_VC100,Estimate; PLACE OF BIRTH - Total population - Native - Born in United States
+MOE_VC100,Margin of Error; PLACE OF BIRTH - Total population - Native - Born in United States
+EST_VC101,Estimate; PLACE OF BIRTH - Total population - Native - Born in United States - State of residence
+MOE_VC101,Margin of Error; PLACE OF BIRTH - Total population - Native - Born in United States - State of residence
+EST_VC102,Estimate; PLACE OF BIRTH - Total population - Native - Born in United States - Different state
+MOE_VC102,Margin of Error; PLACE OF BIRTH - Total population - Native - Born in United States - Different state
+EST_VC103,"Estimate; PLACE OF BIRTH - Total population - Native - Born in Puerto Rico, U.S. Island areas, or born abroad to American parent(s)"
+MOE_VC103,"Margin of Error; PLACE OF BIRTH - Total population - Native - Born in Puerto Rico, U.S. Island areas, or born abroad to American parent(s)"
+EST_VC104,Estimate; PLACE OF BIRTH - Total population - Foreign born
+MOE_VC104,Margin of Error; PLACE OF BIRTH - Total population - Foreign born
+EST_VC106,Estimate; U.S. CITIZENSHIP STATUS - Foreign-born population
+MOE_VC106,Margin of Error; U.S. CITIZENSHIP STATUS - Foreign-born population
+EST_VC107,Estimate; U.S. CITIZENSHIP STATUS - Foreign-born population - Naturalized U.S. citizen
+MOE_VC107,Margin of Error; U.S. CITIZENSHIP STATUS - Foreign-born population - Naturalized U.S. citizen
+EST_VC108,Estimate; U.S. CITIZENSHIP STATUS - Foreign-born population - Not a U.S. citizen
+MOE_VC108,Margin of Error; U.S. CITIZENSHIP STATUS - Foreign-born population - Not a U.S. citizen
+EST_VC110,Estimate; YEAR OF ENTRY - Population born outside the United States
+MOE_VC110,Margin of Error; YEAR OF ENTRY - Population born outside the United States
+EST_VC111,Estimate; YEAR OF ENTRY - Population born outside the United States - Native
+MOE_VC111,Margin of Error; YEAR OF ENTRY - Population born outside the United States - Native
+EST_VC112,Estimate; YEAR OF ENTRY - Population born outside the United States - Native - Entered 2000 or later
+MOE_VC112,Margin of Error; YEAR OF ENTRY - Population born outside the United States - Native - Entered 2000 or later
+EST_VC113,Estimate; YEAR OF ENTRY - Population born outside the United States - Native - Entered before 2000
+MOE_VC113,Margin of Error; YEAR OF ENTRY - Population born outside the United States - Native - Entered before 2000
+EST_VC114,Estimate; YEAR OF ENTRY - Population born outside the United States - Foreign born
+MOE_VC114,Margin of Error; YEAR OF ENTRY - Population born outside the United States - Foreign born
+EST_VC115,Estimate; YEAR OF ENTRY - Population born outside the United States - Foreign born - Entered 2000 or later
+MOE_VC115,Margin of Error; YEAR OF ENTRY - Population born outside the United States - Foreign born - Entered 2000 or later
+EST_VC116,Estimate; YEAR OF ENTRY - Population born outside the United States - Foreign born - Entered before 2000
+MOE_VC116,Margin of Error; YEAR OF ENTRY - Population born outside the United States - Foreign born - Entered before 2000
+EST_VC118,"Estimate; WORLD REGION OF BIRTH OF FOREIGN BORN - Foreign-born population, excluding population born at sea"
+MOE_VC118,"Margin of Error; WORLD REGION OF BIRTH OF FOREIGN BORN - Foreign-born population, excluding population born at sea"
+EST_VC119,"Estimate; WORLD REGION OF BIRTH OF FOREIGN BORN - Foreign-born population, excluding population born at sea - Europe"
+MOE_VC119,"Margin of Error; WORLD REGION OF BIRTH OF FOREIGN BORN - Foreign-born population, excluding population born at sea - Europe"
+EST_VC120,"Estimate; WORLD REGION OF BIRTH OF FOREIGN BORN - Foreign-born population, excluding population born at sea - Asia"
+MOE_VC120,"Margin of Error; WORLD REGION OF BIRTH OF FOREIGN BORN - Foreign-born population, excluding population born at sea - Asia"
+EST_VC121,"Estimate; WORLD REGION OF BIRTH OF FOREIGN BORN - Foreign-born population, excluding population born at sea - Africa"
+MOE_VC121,"Margin of Error; WORLD REGION OF BIRTH OF FOREIGN BORN - Foreign-born population, excluding population born at sea - Africa"
+EST_VC122,"Estimate; WORLD REGION OF BIRTH OF FOREIGN BORN - Foreign-born population, excluding population born at sea - Oceania"
+MOE_VC122,"Margin of Error; WORLD REGION OF BIRTH OF FOREIGN BORN - Foreign-born population, excluding population born at sea - Oceania"
+EST_VC123,"Estimate; WORLD REGION OF BIRTH OF FOREIGN BORN - Foreign-born population, excluding population born at sea - Latin America"
+MOE_VC123,"Margin of Error; WORLD REGION OF BIRTH OF FOREIGN BORN - Foreign-born population, excluding population born at sea - Latin America"
+EST_VC124,"Estimate; WORLD REGION OF BIRTH OF FOREIGN BORN - Foreign-born population, excluding population born at sea - Northern America"
+MOE_VC124,"Margin of Error; WORLD REGION OF BIRTH OF FOREIGN BORN - Foreign-born population, excluding population born at sea - Northern America"
+EST_VC126,Estimate; LANGUAGE SPOKEN AT HOME - Population 5 years and over
+MOE_VC126,Margin of Error; LANGUAGE SPOKEN AT HOME - Population 5 years and over
+EST_VC127,Estimate; LANGUAGE SPOKEN AT HOME - Population 5 years and over - English only
+MOE_VC127,Margin of Error; LANGUAGE SPOKEN AT HOME - Population 5 years and over - English only
+EST_VC128,Estimate; LANGUAGE SPOKEN AT HOME - Population 5 years and over - Language other than English
+MOE_VC128,Margin of Error; LANGUAGE SPOKEN AT HOME - Population 5 years and over - Language other than English
+EST_VC129,"Estimate; LANGUAGE SPOKEN AT HOME - Population 5 years and over - Language other than English - Speak English less than ""very well"""
+MOE_VC129,"Margin of Error; LANGUAGE SPOKEN AT HOME - Population 5 years and over - Language other than English - Speak English less than ""very well"""
+EST_VC130,Estimate; LANGUAGE SPOKEN AT HOME - Population 5 years and over - Spanish
+MOE_VC130,Margin of Error; LANGUAGE SPOKEN AT HOME - Population 5 years and over - Spanish
+EST_VC131,"Estimate; LANGUAGE SPOKEN AT HOME - Population 5 years and over - Spanish - Speak English less than ""very well"""
+MOE_VC131,"Margin of Error; LANGUAGE SPOKEN AT HOME - Population 5 years and over - Spanish - Speak English less than ""very well"""
+EST_VC132,Estimate; LANGUAGE SPOKEN AT HOME - Population 5 years and over - Other Indo-European languages
+MOE_VC132,Margin of Error; LANGUAGE SPOKEN AT HOME - Population 5 years and over - Other Indo-European languages
+EST_VC133,"Estimate; LANGUAGE SPOKEN AT HOME - Population 5 years and over - Other Indo-European languages - Speak English less than ""very well"""
+MOE_VC133,"Margin of Error; LANGUAGE SPOKEN AT HOME - Population 5 years and over - Other Indo-European languages - Speak English less than ""very well"""
+EST_VC134,Estimate; LANGUAGE SPOKEN AT HOME - Population 5 years and over - Asian and Pacific Islander languages
+MOE_VC134,Margin of Error; LANGUAGE SPOKEN AT HOME - Population 5 years and over - Asian and Pacific Islander languages
+EST_VC135,"Estimate; LANGUAGE SPOKEN AT HOME - Population 5 years and over - Asian and Pacific Islander languages - Speak English less than ""very well"""
+MOE_VC135,"Margin of Error; LANGUAGE SPOKEN AT HOME - Population 5 years and over - Asian and Pacific Islander languages - Speak English less than ""very well"""
+EST_VC136,Estimate; LANGUAGE SPOKEN AT HOME - Population 5 years and over - Other languages
+MOE_VC136,Margin of Error; LANGUAGE SPOKEN AT HOME - Population 5 years and over - Other languages
+EST_VC137,"Estimate; LANGUAGE SPOKEN AT HOME - Population 5 years and over - Other languages - Speak English less than ""very well"""
+MOE_VC137,"Margin of Error; LANGUAGE SPOKEN AT HOME - Population 5 years and over - Other languages - Speak English less than ""very well"""
+EST_VC139,Estimate; ANCESTRY - Total population
+MOE_VC139,Margin of Error; ANCESTRY - Total population
+EST_VC140,Estimate; ANCESTRY - Total population - American
+MOE_VC140,Margin of Error; ANCESTRY - Total population - American
+EST_VC141,Estimate; ANCESTRY - Total population - Arab
+MOE_VC141,Margin of Error; ANCESTRY - Total population - Arab
+EST_VC142,Estimate; ANCESTRY - Total population - Czech
+MOE_VC142,Margin of Error; ANCESTRY - Total population - Czech
+EST_VC143,Estimate; ANCESTRY - Total population - Danish
+MOE_VC143,Margin of Error; ANCESTRY - Total population - Danish
+EST_VC144,Estimate; ANCESTRY - Total population - Dutch
+MOE_VC144,Margin of Error; ANCESTRY - Total population - Dutch
+EST_VC145,Estimate; ANCESTRY - Total population - English
+MOE_VC145,Margin of Error; ANCESTRY - Total population - English
+EST_VC146,Estimate; ANCESTRY - Total population - French (except Basque)
+MOE_VC146,Margin of Error; ANCESTRY - Total population - French (except Basque)
+EST_VC147,Estimate; ANCESTRY - Total population - French Canadian
+MOE_VC147,Margin of Error; ANCESTRY - Total population - French Canadian
+EST_VC148,Estimate; ANCESTRY - Total population - German
+MOE_VC148,Margin of Error; ANCESTRY - Total population - German
+EST_VC149,Estimate; ANCESTRY - Total population - Greek
+MOE_VC149,Margin of Error; ANCESTRY - Total population - Greek
+EST_VC150,Estimate; ANCESTRY - Total population - Hungarian
+MOE_VC150,Margin of Error; ANCESTRY - Total population - Hungarian
+EST_VC151,Estimate; ANCESTRY - Total population - Irish
+MOE_VC151,Margin of Error; ANCESTRY - Total population - Irish
+EST_VC152,Estimate; ANCESTRY - Total population - Italian
+MOE_VC152,Margin of Error; ANCESTRY - Total population - Italian
+EST_VC153,Estimate; ANCESTRY - Total population - Lithuanian
+MOE_VC153,Margin of Error; ANCESTRY - Total population - Lithuanian
+EST_VC154,Estimate; ANCESTRY - Total population - Norwegian
+MOE_VC154,Margin of Error; ANCESTRY - Total population - Norwegian
+EST_VC155,Estimate; ANCESTRY - Total population - Polish
+MOE_VC155,Margin of Error; ANCESTRY - Total population - Polish
+EST_VC156,Estimate; ANCESTRY - Total population - Portuguese
+MOE_VC156,Margin of Error; ANCESTRY - Total population - Portuguese
+EST_VC157,Estimate; ANCESTRY - Total population - Russian
+MOE_VC157,Margin of Error; ANCESTRY - Total population - Russian
+EST_VC158,Estimate; ANCESTRY - Total population - Scotch-Irish
+MOE_VC158,Margin of Error; ANCESTRY - Total population - Scotch-Irish
+EST_VC159,Estimate; ANCESTRY - Total population - Scottish
+MOE_VC159,Margin of Error; ANCESTRY - Total population - Scottish
+EST_VC160,Estimate; ANCESTRY - Total population - Slovak
+MOE_VC160,Margin of Error; ANCESTRY - Total population - Slovak
+EST_VC161,Estimate; ANCESTRY - Total population - Subsaharan African
+MOE_VC161,Margin of Error; ANCESTRY - Total population - Subsaharan African
+EST_VC162,Estimate; ANCESTRY - Total population - Swedish
+MOE_VC162,Margin of Error; ANCESTRY - Total population - Swedish
+EST_VC163,Estimate; ANCESTRY - Total population - Swiss
+MOE_VC163,Margin of Error; ANCESTRY - Total population - Swiss
+EST_VC164,Estimate; ANCESTRY - Total population - Ukrainian
+MOE_VC164,Margin of Error; ANCESTRY - Total population - Ukrainian
+EST_VC165,Estimate; ANCESTRY - Total population - Welsh
+MOE_VC165,Margin of Error; ANCESTRY - Total population - Welsh
+EST_VC166,Estimate; ANCESTRY - Total population - West Indian (excluding Hispanic origin groups)
+MOE_VC166,Margin of Error; ANCESTRY - Total population - West Indian (excluding Hispanic origin groups)
