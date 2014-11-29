@@ -18,4 +18,4 @@ def get_voting_data():
             vote_map[year] = sub_map
     return vote_map
 
-print get_voting_data()["2006"]["Santa Clara_Percent"]["2006_1B_Yes"]
+#print get_voting_data()["2006"]["Santa Clara_Percent"]["2006_1B_Yes"]

@@ -1,9 +1,14 @@
 import csv
 import numpy as np
+import voting
 
-
-column_names = []
-
+counties = ["Alameda", "Butte" , "Contra Costa", "El Dorado", "Fresno",
+"Humboldt", "Imperial", "Kern", "Kings", "Lake", "Los Angeles", "Madera",
+"Marin", "Mendocino", "Merced", "Monterey", "Napa", "Nevada", "Orange",
+"Placer", "Riverside", "Sacramento", "San Bernardino", "San Diego",
+"San Francisco", "San Joaquin", "San Luis Obispo", "San Mateo",
+"Santa Barbara", "Santa Clara", "Santa Cruz", "Shasta", "Solano", "Sonoma",
+"Stanislaus", "Sutter", "Tulare", "Ventura", "Yolo", "Yuba"]
 
 # Estimate; HOUSEHOLDS BY TYPE - Total households	
 # Margin of Error; HOUSEHOLDS BY TYPE - Total households	
@@ -303,28 +308,33 @@ column_names = []
 # Estimate; ANCESTRY - Total population - West Indian (excluding Hispanic origin groups)	
 # Margin of Error; ANCESTRY - Total population - West Indian (excluding Hispanic origin groups)
 
-def construct_design_matrix(year, demographics, county):
+def construct_submatrix(year, demographics, county, prop, type, polarity):
 
+        voting_data = voting.get_voting_data()
+        targetArray = []
+        vote = voting_data[str(year)][county + "_" + type][str(year) + "_" + prop + "_" + polarity]
+        if type == "Percent":
+            vote = vote[:-1]
+        targetArray.append(float(vote))
 	
 	fileStr = 'demographic_csvs/ACS_' + str('%02d') % (year%100) + '_1YR_DP2_with_ann.csv'
-	print fileStr
 	with open(fileStr, 'rb') as csvfile:
-		spamreader = csv.reader(csvfile)
+		reader = csv.reader(csvfile)
 		designArray = []
 
-		for index, row in enumerate(spamreader):
+		for row in reader:
 		
-			if(row[2]==county):
+			if(row[2] == (county + " County, California")):
 
 				nextFeatureVector = []
 				for dem in demographics:
-					nextFeatureVector.append(row[dem])
+					nextFeatureVector.append(float(row[dem]))
 
 				designArray.append(nextFeatureVector)
 
-		print np.matrix(designArray)
+		return np.matrix(designArray), np.matrix(targetArray)
 
-construct_design_matrix(2007, [10,11,12], "Alameda County, California")
+#print construct_submatrix(2006, [10,11,12], "Alameda", "1A", "Percent", "Yes")
 
 # with open('demographic_csvs/ACS_07_1YR_DP2_with_ann.csv', 'rb') as csvfile:
 # 	spamreader = csv.reader(csvfile)
