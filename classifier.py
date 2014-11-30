@@ -54,19 +54,32 @@ def combine_design_matrices(issues, tag):
     return designMatrix, targetMatrix
 
 
+def zero_or_one(number):
+    if number > 50:
+        return 1
+    else:
+        return 0
+
+def convert_to_binary_target(targetMatrix):
+    vecfunc = np.vectorize(zero_or_one)
+    return vecfunc(targetMatrix)
+
+
 def build_model():
     sample_issues = [{ "year": 2006, "prop": "1A", "polarity": "Yes" }, { "year": 2008, "prop": "12", "polarity": "No" }]
     sample_tag = { "name": "DiscoShit", "type": "Percent", "demographics": [10, 11, 12] }
-    designMatrix, targetMatrix = combine_design_matrices(sample_issues, sample_tag)
+    design_matrix, target_matrix = combine_design_matrices(sample_issues, sample_tag)
+
    
-    inputMatrix = np.hstack((targetMatrix, designMatrix))
+    inputMatrix = np.hstack((convert_to_binary_target(target_matrix), design_matrix))
+
+    print inputMatrix
 
     clf = linear_model.LinearRegression()
 
-    clf.fit(designMatrix, targetMatrix)
+    clf.fit(design_matrix, (convert_to_binary_target(target_matrix)))
 
 
-    print clf.coef_
 
 
 build_model()
