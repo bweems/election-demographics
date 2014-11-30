@@ -54,17 +54,22 @@ def combine_design_matrices(issues, tag):
     return designMatrix, targetMatrix
 
 
-def test_design_matrix():
+def build_model():
     sample_issues = [{ "year": 2006, "prop": "1A", "polarity": "Yes" }, { "year": 2008, "prop": "12", "polarity": "No" }]
     sample_tag = { "name": "DiscoShit", "type": "Percent", "demographics": [10, 11, 12] }
     designMatrix, targetMatrix = combine_design_matrices(sample_issues, sample_tag)
    
     inputMatrix = np.hstack((targetMatrix, designMatrix))
 
+    clf = linear_model.LinearRegression()
+
+    clf.fit(designMatrix, targetMatrix)
 
 
+    print clf.coef_
 
-test_design_matrix()
+
+build_model()
 
 
 # combine_design_matrices(sample_issues, sample_tag)
