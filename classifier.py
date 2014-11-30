@@ -2,6 +2,7 @@ import csv
 import numpy as np
 import voting
 import demographic
+from sklearn import linear_model
 
 counties = ["Alameda", "Butte" , "Contra Costa", "El Dorado", "Fresno",
 "Humboldt", "Imperial", "Kern", "Kings", "Lake", "Los Angeles", "Madera",
@@ -13,6 +14,8 @@ counties = ["Alameda", "Butte" , "Contra Costa", "El Dorado", "Fresno",
 
 sample_issues = [{ "year": 2006, "prop": "1A", "polarity": "Yes" }, { "year": 2008, "prop": "12", "polarity": "No" }]
 sample_tag = { "name": "DiscoShit", "type": "Percent", "demographics": [10, 11, 12] }
+
+
 
 def compose_design_matrix(issue, tag):
     designMatrix = None
@@ -46,8 +49,22 @@ def combine_design_matrices(issues, tag):
         else:
             targetMatrix = np.vstack((targetMatrix, temp_target))
 
-    print designMatrix
-    print targetMatrix
+    # print designMatrix
+    # print targetMatrix
     return designMatrix, targetMatrix
 
-combine_design_matrices(sample_issues, sample_tag)
+
+def test_design_matrix():
+    sample_issues = [{ "year": 2006, "prop": "1A", "polarity": "Yes" }, { "year": 2008, "prop": "12", "polarity": "No" }]
+    sample_tag = { "name": "DiscoShit", "type": "Percent", "demographics": [10, 11, 12] }
+    designMatrix, targetMatrix = combine_design_matrices(sample_issues, sample_tag)
+   
+    inputMatrix = np.hstack((targetMatrix, designMatrix))
+
+
+
+
+test_design_matrix()
+
+
+# combine_design_matrices(sample_issues, sample_tag)
