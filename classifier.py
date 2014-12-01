@@ -87,6 +87,11 @@ def test_classifier_model(model, design_matrix, target_matrix):
     print num_errors / len(target_array)
 
 
+def get_all_training_issues():
+    f = open('Proposition Labels.csv', 'r')
+    print f.read()
+
+
 def test():
     sample_issues = [{ "year": 2008, "prop": "11", "polarity": "No" }]
     sample_tag = { "name": "DiscoShit", "type": "Percent", "demographics": [26] }
@@ -94,11 +99,8 @@ def test():
     test_classifier_model(model, design_matrix, target_matrix.ravel())
 
 
+get_all_training_issues()
 
-
-
-
-test()
 
 
 # combine_design_matrices(sample_issues, sample_tag)
