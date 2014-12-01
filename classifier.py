@@ -17,6 +17,8 @@ counties = ["Alameda", "Butte" , "Contra Costa", "El Dorado", "Fresno",
 
 
 
+
+
 def compose_design_matrix(issue, tag):
     designMatrix = None
     targetMatrix = None
@@ -65,7 +67,7 @@ def convert_to_binary_target(targetMatrix):
     return vecfunc(targetMatrix)
 
 
-def build_model(issues, tag):
+def build_classifier_model(issues, tag):
     design_matrix, target_matrix = combine_design_matrices(issues, tag)
     binary_target_matrix = convert_to_binary_target(target_matrix)
     clf = svm.LinearSVC()
@@ -88,7 +90,7 @@ def test_classifier_model(model, design_matrix, target_matrix):
 def test():
     sample_issues = [{ "year": 2008, "prop": "11", "polarity": "No" }]
     sample_tag = { "name": "DiscoShit", "type": "Percent", "demographics": [26] }
-    model, design_matrix, target_matrix = build_model(sample_issues, sample_tag)
+    model, design_matrix, target_matrix = build_classifier_model(sample_issues, sample_tag)
     test_classifier_model(model, design_matrix, target_matrix.ravel())
 
 
