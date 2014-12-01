@@ -3,6 +3,8 @@ import numpy as np
 import voting
 import demographic
 from sklearn import svm
+from sklearn.cluster import KMeans
+
 
 counties = ["Alameda", "Butte" , "Contra Costa", "El Dorado", "Fresno",
 "Humboldt", "Imperial", "Kern", "Kings", "Lake", "Los Angeles", "Madera",
@@ -87,10 +89,25 @@ def test_classifier_model(model, design_matrix, target_matrix):
     print num_errors / len(target_array)
 
 
-def get_all_training_issues():
-    f = open('Proposition Labels.csv', 'r')
-    print f.read()
+def is_number(s):
+    try:
+        float(s)
+        return True
+    except ValueError:
+        return False
 
+
+def get_all_training_issues():
+
+    issues = []
+
+    f = open('Proposition Labels.csv', 'rU')
+    for line in f:
+        issue_array = line.split(',')
+        if issue_array[0] != '2014' and is_number(issue_array[0]):
+            issue_dict = {'year': issue_array[0], 'prop': issue_array[4], 'polarity': 'Yes'}
+            issues.append(issue_dict)
+    return issues
 
 def test():
     sample_issues = [{ "year": 2008, "prop": "11", "polarity": "No" }]
@@ -99,8 +116,8 @@ def test():
     test_classifier_model(model, design_matrix, target_matrix.ravel())
 
 
-get_all_training_issues()
 
+test()
 
 
 # combine_design_matrices(sample_issues, sample_tag)
