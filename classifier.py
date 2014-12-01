@@ -12,8 +12,8 @@ counties = ["Alameda", "Butte" , "Contra Costa", "El Dorado", "Fresno",
 "Santa Barbara", "Santa Clara", "Santa Cruz", "Shasta", "Solano", "Sonoma",
 "Stanislaus", "Sutter", "Tulare", "Ventura", "Yolo", "Yuba"]
 
-sample_issues = [{ "year": 2006, "prop": "1A", "polarity": "Yes" }, { "year": 2008, "prop": "12", "polarity": "No" }]
-sample_tag = { "name": "DiscoShit", "type": "Percent", "demographics": [10, 11, 12] }
+# sample_issues = [{ "year": 2006, "prop": "1A", "polarity": "Yes" }, { "year": 2008, "prop": "12", "polarity": "No" }]
+# sample_tag = { "name": "DiscoShit", "type": "Percent", "demographics": [10, 11, 12] }
 
 
 
@@ -68,23 +68,28 @@ def convert_to_binary_target(targetMatrix):
 def build_model(issues, tag):
     design_matrix, target_matrix = combine_design_matrices(issues, tag)
     binary_target_matrix = convert_to_binary_target(target_matrix)
-    clf = svm.SVC()
-    clf.fit(design_matrix, binary_target_matrix)
+    clf = svm.LinearSVC()
+    clf.fit(design_matrix, np.asarray(binary_target_matrix).ravel().transpose())
     return clf, design_matrix, binary_target_matrix
 
 
 def test_classifier_model(model, design_matrix, target_matrix):
     num_errors = 0.0
-    for i in range(len(target_matrix)):
-        print model.predict(design_matrix[i])[0]
-        print np.array(target_matrix[i])
+    target_array = np.asarray(target_matrix).ravel()
+    for i in range(len(target_array) - 1):
+        if model.predict(design_matrix[i])[0] != np.array(target_array[i]):
+            num_errors += 1
+    print "Number of errors:"
+    print num_errors
+    print "Error percentage:"
+    print num_errors / len(target_array)
 
 
 def test():
-    sample_issues = [{ "year": 2006, "prop": "1A", "polarity": "Yes" }, { "year": 2008, "prop": "12", "polarity": "No" }]
-    sample_tag = { "name": "DiscoShit", "type": "Percent", "demographics": [10, 11, 12] }
+    sample_issues = [{ "year": 2008, "prop": "11", "polarity": "No" }]
+    sample_tag = { "name": "DiscoShit", "type": "Percent", "demographics": [26] }
     model, design_matrix, target_matrix = build_model(sample_issues, sample_tag)
-    test_classifier_model(model, design_matrix, target_matrix)
+    test_classifier_model(model, design_matrix, target_matrix.ravel())
 
 
 
