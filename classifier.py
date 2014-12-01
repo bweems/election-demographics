@@ -2,7 +2,7 @@ import csv
 import numpy as np
 import voting
 import demographic
-from sklearn import linear_model
+from sklearn import svm
 
 counties = ["Alameda", "Butte" , "Contra Costa", "El Dorado", "Fresno",
 "Humboldt", "Imperial", "Kern", "Kings", "Lake", "Los Angeles", "Madera",
@@ -65,24 +65,33 @@ def convert_to_binary_target(targetMatrix):
     return vecfunc(targetMatrix)
 
 
-def build_model():
+def build_model(issues, tag):
+    design_matrix, target_matrix = combine_design_matrices(issues, tag)
+    binary_target_matrix = convert_to_binary_target(target_matrix)
+    clf = svm.SVC()
+    clf.fit(design_matrix, binary_target_matrix)
+    return clf, design_matrix, binary_target_matrix
+
+
+def test_classifier_model(model, design_matrix, target_matrix):
+    num_errors = 0.0
+    for i in range(len(target_matrix)):
+        print model.predict(design_matrix[i])[0]
+        print np.array(target_matrix[i])
+
+
+def test():
     sample_issues = [{ "year": 2006, "prop": "1A", "polarity": "Yes" }, { "year": 2008, "prop": "12", "polarity": "No" }]
     sample_tag = { "name": "DiscoShit", "type": "Percent", "demographics": [10, 11, 12] }
-    design_matrix, target_matrix = combine_design_matrices(sample_issues, sample_tag)
-
-   
-    inputMatrix = np.hstack((convert_to_binary_target(target_matrix), design_matrix))
-
-    print inputMatrix
-
-    clf = linear_model.LinearRegression()
-
-    clf.fit(design_matrix, (convert_to_binary_target(target_matrix)))
+    model, design_matrix, target_matrix = build_model(sample_issues, sample_tag)
+    test_classifier_model(model, design_matrix, target_matrix)
 
 
 
 
-build_model()
+
+
+test()
 
 
 # combine_design_matrices(sample_issues, sample_tag)
