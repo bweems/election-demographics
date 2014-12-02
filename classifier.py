@@ -6,7 +6,6 @@ from sklearn import svm
 from sklearn.cluster import KMeans
 from sklearn.svm import SVR
 
-
 counties = ["Alameda", "Butte" , "Contra Costa", "El Dorado", "Fresno",
 "Humboldt", "Imperial", "Kern", "Kings", "Lake", "Los Angeles", "Madera",
 "Marin", "Mendocino", "Merced", "Monterey", "Napa", "Nevada", "Orange",
@@ -17,10 +16,6 @@ counties = ["Alameda", "Butte" , "Contra Costa", "El Dorado", "Fresno",
 
 # sample_issues = [{ "year": 2006, "prop": "1A", "polarity": "Yes" }, { "year": 2008, "prop": "12", "polarity": "No" }]
 # sample_tag = { "name": "DiscoShit", "type": "Percent", "demographics": [10, 11, 12] }
-
-
-
-
 
 def compose_design_matrix(issue, tag):
     designMatrix = None
@@ -131,7 +126,7 @@ def build_classifier_model(issues, tag):
 def build_regression_model(issues, tag):
     print issues
     design_matrix, target_matrix = combine_design_matrices(issues, tag)
-    svr_lin = SVR(kernel='linear', C=1e3)
+    svr_lin = SVR(kernel='linear')
     svr_lin.fit(design_matrix, np.asarray(target_matrix).ravel().transpose())
     return svr_lin
 
@@ -144,9 +139,7 @@ def train_model():
     model = build_regression_model(training_issues_hash['crime'], tag)
 
     # for category in training_issues_hash:
-        
 
- 
 train_model()
 
 
