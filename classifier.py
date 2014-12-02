@@ -77,6 +77,7 @@ def build_classifier_model(issues, tag):
     return clf, design_matrix, binary_target_matrix
 
 
+
 def test_classifier_model(model, design_matrix, target_matrix):
     num_errors = 0.0
     target_array = np.asarray(target_matrix).ravel()
@@ -108,6 +109,8 @@ def get_all_training_issues():
             issue_dict = {'year': issue_array[0], 'prop': issue_array[4], 'polarity': 'Yes'}
             issues.append(issue_dict)
     return issues
+
+
 
 def test():
     sample_issues = [{ "year": 2008, "prop": "11", "polarity": "No" }]
