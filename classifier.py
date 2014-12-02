@@ -113,13 +113,7 @@ def build_classifier_model(issues, tag):
     return clf, design_matrix, binary_target_matrix
 
 def build_regression_model(issues, tag):
-    print issues
     design_matrix, target_matrix = combine_design_matrices(issues, tag)
-<<<<<<< HEAD
-    svr_lin = SVR(kernel='linear')
-    svr_lin.fit(design_matrix, np.asarray(target_matrix).ravel().transpose())
-    return svr_lin
-=======
     clf = SVR()
     clf.fit(design_matrix, np.asarray(target_matrix).ravel().transpose())
     return clf
