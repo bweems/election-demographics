@@ -5,6 +5,7 @@ import demographic
 from sklearn import svm
 from sklearn.cluster import KMeans
 from sklearn.svm import SVR
+from sklearn import linear_model
 
 counties = ["Alameda", "Butte" , "Contra Costa", "El Dorado", "Fresno",
 "Humboldt", "Imperial", "Kern", "Kings", "Lake", "Los Angeles", "Madera",
@@ -65,18 +66,6 @@ def convert_to_binary_target(targetMatrix):
     return vecfunc(targetMatrix)
 
 
-def test_classifier_model(model, design_matrix, target_matrix):
-    num_errors = 0.0
-    target_array = np.asarray(target_matrix).ravel()
-    for i in range(len(target_array) - 1):
-        if model.predict(design_matrix[i])[0] != np.array(target_array[i]):
-            num_errors += 1
-    print "Number of errors:"
-    print num_errors
-    print "Error percentage:"
-    print num_errors / len(target_array)
-
-
 def is_number(s):
     try:
         float(s)
@@ -126,9 +115,50 @@ def build_classifier_model(issues, tag):
 def build_regression_model(issues, tag):
     print issues
     design_matrix, target_matrix = combine_design_matrices(issues, tag)
+<<<<<<< HEAD
     svr_lin = SVR(kernel='linear')
     svr_lin.fit(design_matrix, np.asarray(target_matrix).ravel().transpose())
     return svr_lin
+=======
+    clf = SVR()
+    clf.fit(design_matrix, np.asarray(target_matrix).ravel().transpose())
+    return clf
+
+
+def test_classifier_model(model, design_matrix, target_matrix, test_design_matrix, test_target_matrix):
+
+    num_errors = 0.0
+    target_array = np.asarray(target_matrix).ravel()
+    for i in range(len(target_array) - 1):
+        if model.predict(design_matrix[i])[0] != np.array(target_array[i]):
+            num_errors += 1
+            # print design_matrix[i]
+            # print np.array(target_array[i])
+            # print
+    print
+    print "Number of errors (Training):"
+    print num_errors
+    print "Error percentage (Training):"
+    print num_errors / len(target_array)
+    print
+
+    num_test_errors = 0.0
+    test_target_array = np.asarray(test_target_matrix).ravel()
+    for i in range(len(test_target_array) - 1):
+        if model.predict(test_design_matrix[i])[0] != np.array(test_target_array[i]):
+            num_test_errors += 1
+            # print test_design_matrix[i]
+            # print np.array(test_target_array[i])
+            # print
+
+    print "Number of errors (Testing):"
+    print num_test_errors
+    print "Error percentage (Testing):"
+    print num_test_errors / len(test_target_array)
+    print
+
+# def test_regression_model(model, design_matrix, target_matrix):
+
 
 
 def train_model():
@@ -138,9 +168,27 @@ def train_model():
 
     model = build_regression_model(training_issues_hash['crime'], tag)
 
-    # for category in training_issues_hash:
+    for category in training_issues_hash:
+        model = build_regression_model(training_issues_hash[category], tag) 
 
-train_model()
 
+def test_features():
+    training_issues_hash = get_all_training_issues()
+    crime_issues = training_issues_hash['crime']
+    test_prop = crime_issues.pop()
+    print test_prop
+    tag = { "name": "DiscoShit", "type": "Percent", "demographics": [9, 8, 7] }
+
+    model,design_matrix, target_matrix = build_classifier_model(crime_issues, tag)
+    test_design_matrix,test_target_matrix = combine_design_matrices([test_prop], tag)
+    test_target_matrix = convert_to_binary_target(test_target_matrix)
+
+    test_classifier_model(model, design_matrix, target_matrix.ravel(), test_design_matrix, test_target_matrix)
+
+
+
+
+ 
+test_features()
 
 # combine_design_matrices(sample_issues, sample_tag)
