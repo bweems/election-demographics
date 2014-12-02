@@ -4,7 +4,7 @@ import voting
 import demographic
 from sklearn import svm
 from sklearn.cluster import KMeans
-
+from sklearn.svm import SVR
 
 counties = ["Alameda", "Butte" , "Contra Costa", "El Dorado", "Fresno",
 "Humboldt", "Imperial", "Kern", "Kings", "Lake", "Los Angeles", "Madera",
@@ -16,10 +16,6 @@ counties = ["Alameda", "Butte" , "Contra Costa", "El Dorado", "Fresno",
 
 # sample_issues = [{ "year": 2006, "prop": "1A", "polarity": "Yes" }, { "year": 2008, "prop": "12", "polarity": "No" }]
 # sample_tag = { "name": "DiscoShit", "type": "Percent", "demographics": [10, 11, 12] }
-
-
-
-
 
 def compose_design_matrix(issue, tag):
     designMatrix = None
@@ -69,15 +65,6 @@ def convert_to_binary_target(targetMatrix):
     return vecfunc(targetMatrix)
 
 
-def build_classifier_model(issues, tag):
-    design_matrix, target_matrix = combine_design_matrices(issues, tag)
-    binary_target_matrix = convert_to_binary_target(target_matrix)
-    clf = svm.LinearSVC()
-    clf.fit(design_matrix, np.asarray(binary_target_matrix).ravel().transpose())
-    return clf, design_matrix, binary_target_matrix
-
-
-
 def test_classifier_model(model, design_matrix, target_matrix):
     num_errors = 0.0
     target_array = np.asarray(target_matrix).ravel()
@@ -98,20 +85,6 @@ def is_number(s):
         return False
 
 
-def get_all_training_issues():
-
-    issues = []
-
-    f = open('Proposition Labels.csv', 'rU')
-    for line in f:
-        issue_array = line.split(',')
-        if issue_array[0] != '2014' and is_number(issue_array[0]):
-            issue_dict = {'year': issue_array[0], 'prop': issue_array[4], 'polarity': 'Yes'}
-            issues.append(issue_dict)
-    return issues
-
-
-
 def test():
     sample_issues = [{ "year": 2008, "prop": "11", "polarity": "No" }]
     sample_tag = { "name": "DiscoShit", "type": "Percent", "demographics": [26] }
@@ -119,7 +92,8 @@ def test():
     test_classifier_model(model, design_matrix, target_matrix.ravel())
 
 
-def get_all_issue_buckets():
+
+def get_all_training_issues():
     issues_hash = {}
     issues_hash['infra'] = []
     issues_hash['education'] = []
@@ -133,17 +107,40 @@ def get_all_issue_buckets():
     for line in f:
         arr = line.split(',')
         if arr[0] != '2014' and is_number(arr[0]):
-            next_dict = {'year': arr[0], 'prop': arr[4], 'polarity': arr[6]}
+            next_dict = {'year': int(arr[0]), 'prop': arr[4], 'polarity': arr[6]}
             category = arr[5]
             if category != '0' and category != 'veterans':
                 issues_hash[category].append(next_dict)
 
-    print issues_hash['crime']
+    return issues_hash
 
 
 
+def build_classifier_model(issues, tag):
+    design_matrix, target_matrix = combine_design_matrices(issues, tag)
+    binary_target_matrix = convert_to_binary_target(target_matrix)
+    clf = svm.LinearSVC()
+    clf.fit(design_matrix, np.asarray(binary_target_matrix).ravel().transpose())
+    return clf, design_matrix, binary_target_matrix
 
-get_all_issue_buckets()
+def build_regression_model(issues, tag):
+    print issues
+    design_matrix, target_matrix = combine_design_matrices(issues, tag)
+    svr_lin = SVR(kernel='linear')
+    svr_lin.fit(design_matrix, np.asarray(target_matrix).ravel().transpose())
+    return svr_lin
+
+
+def train_model():
+    training_issues_hash = get_all_training_issues()
+    model_hash = {}
+    tag = { "name": "DiscoShit", "type": "Percent", "demographics": [26] }
+
+    model = build_regression_model(training_issues_hash['crime'], tag)
+
+    # for category in training_issues_hash:
+
+train_model()
 
 
 # combine_design_matrices(sample_issues, sample_tag)
