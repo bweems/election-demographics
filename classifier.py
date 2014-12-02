@@ -163,6 +163,7 @@ def test_features():
 
     model, design_matrix, target_matrix = build_classifier_model(train_issues, tag)
     test_design_matrix,test_target_matrix = combine_design_matrices(test_issues, tag)
+
     test_target_matrix = convert_to_binary_target(test_target_matrix)
 
     test_classifier_model(model, design_matrix, target_matrix, test_design_matrix, test_target_matrix)
