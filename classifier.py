@@ -1,4 +1,5 @@
 import csv
+import random
 import numpy as np
 import voting
 import demographic
@@ -50,10 +51,7 @@ def combine_design_matrices(issues, tag):
         else:
             targetMatrix = np.vstack((targetMatrix, temp_target))
 
-    # print designMatrix
-    # print targetMatrix
     return designMatrix, targetMatrix
-
 
 def zero_or_one(number):
     if number > 50:
@@ -65,7 +63,6 @@ def convert_to_binary_target(targetMatrix):
     vecfunc = np.vectorize(zero_or_one)
     return vecfunc(targetMatrix)
 
-
 def is_number(s):
     try:
         float(s)
@@ -73,14 +70,11 @@ def is_number(s):
     except ValueError:
         return False
 
-
 def test():
     sample_issues = [{ "year": 2008, "prop": "11", "polarity": "No" }]
     sample_tag = { "name": "DiscoShit", "type": "Percent", "demographics": [26] }
     model, design_matrix, target_matrix = build_classifier_model(sample_issues, sample_tag)
     test_classifier_model(model, design_matrix, target_matrix.ravel())
-
-
 
 def get_all_training_issues():
     issues_hash = {}
@@ -102,8 +96,6 @@ def get_all_training_issues():
                 issues_hash[category].append(next_dict)
 
     return issues_hash
-
-
 
 def build_classifier_model(issues, tag):
     design_matrix, target_matrix = combine_design_matrices(issues, tag)
@@ -150,9 +142,6 @@ def test_classifier_model(model, design_matrix, target_matrix, test_design_matri
     print num_test_errors / len(test_target_array)
     print
 
-# def test_regression_model(model, design_matrix, target_matrix):
-
-
 def train_model():
     training_issues_hash = get_all_training_issues()
     model_hash = {}
@@ -163,24 +152,21 @@ def train_model():
     for category in training_issues_hash:
         model = build_regression_model(training_issues_hash[category], tag) 
 
-
 def test_features():
     training_issues_hash = get_all_training_issues()
-    crime_issues = training_issues_hash['crime']
-    test_prop = crime_issues.pop()
-    print test_prop
-    tag = { "name": "DiscoShit", "type": "Percent", "demographics": [9, 8, 7] }
+    train_issues = training_issues_hash['infra']
+    random.shuffle(train_issues)
+    test_issues = []
+    test_issues.append(train_issues.pop())
+    test_issues.append(train_issues.pop())
+    features = ["HC02_EST_VC04", "HC02_EST_VC06", "HC02_EST_VC07"]
 
-    model,design_matrix, target_matrix = build_classifier_model(crime_issues, tag)
-    test_design_matrix,test_target_matrix = combine_design_matrices([test_prop], tag)
+    tag = { "name": "Infra", "type": "Percent", "demographics": features }
+
+    model, design_matrix, target_matrix = build_classifier_model(train_issues, tag)
+    test_design_matrix,test_target_matrix = combine_design_matrices(test_issues, tag)
     test_target_matrix = convert_to_binary_target(test_target_matrix)
 
     test_classifier_model(model, design_matrix, target_matrix, test_design_matrix, test_target_matrix)
 
-
-
-
- 
 test_features()
-
-# combine_design_matrices(sample_issues, sample_tag)
