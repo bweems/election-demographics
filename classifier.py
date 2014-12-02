@@ -119,8 +119,31 @@ def test():
     test_classifier_model(model, design_matrix, target_matrix.ravel())
 
 
+def get_all_issue_buckets():
+    issues_hash = {}
+    issues_hash['infra'] = []
+    issues_hash['education'] = []
+    issues_hash['crime'] = []
+    issues_hash['environment'] = []
+    issues_hash['gambling'] = []
+    issues_hash['society'] = []
+    issues_hash['politics'] = []
+    issues_hash['corporate'] = []
+    f = open('Proposition Labels.csv', 'rU')
+    for line in f:
+        arr = line.split(',')
+        if arr[0] != '2014' and is_number(arr[0]):
+            next_dict = {'year': arr[0], 'prop': arr[4], 'polarity': arr[6]}
+            category = arr[5]
+            if category != '0' and category != 'veterans':
+                issues_hash[category].append(next_dict)
 
-test()
+    print issues_hash['crime']
+
+
+
+
+get_all_issue_buckets()
 
 
 # combine_design_matrices(sample_issues, sample_tag)
