@@ -7,7 +7,7 @@ import numpy as np
 # -> result = '76.500%'
 
 def get_voting_data():
-    years = ["2006", "2008", "2010", "2012"]
+    years = ["2006", "2008", "2010", "2012", "2014"]
     vote_map = {}
     for year in years:
         with open('elections/' + year + 'BallotMod.csv', 'rb') as csvfile:

@@ -108,7 +108,7 @@ def get_all_training_issues():
 def build_classifier_model(issues, tag):
     design_matrix, target_matrix = combine_design_matrices(issues, tag)
     binary_target_matrix = convert_to_binary_target(target_matrix)
-    clf = svm.LinearSVC()
+    clf = svm.SVC()
     clf.fit(design_matrix, np.asarray(binary_target_matrix).ravel().transpose())
     return clf, design_matrix, binary_target_matrix
 
@@ -117,7 +117,6 @@ def build_regression_model(issues, tag):
     clf = SVR()
     clf.fit(design_matrix, np.asarray(target_matrix).ravel().transpose())
     return clf
-
 
 def test_classifier_model(model, design_matrix, target_matrix, test_design_matrix, test_target_matrix):
 
@@ -176,7 +175,7 @@ def test_features():
     test_design_matrix,test_target_matrix = combine_design_matrices([test_prop], tag)
     test_target_matrix = convert_to_binary_target(test_target_matrix)
 
-    test_classifier_model(model, design_matrix, target_matrix.ravel(), test_design_matrix, test_target_matrix)
+    test_classifier_model(model, design_matrix, target_matrix, test_design_matrix, test_target_matrix)
 
 
 
