@@ -130,7 +130,6 @@ def build_regression_model(issues, tag):
     svr_lin.fit(design_matrix, np.asarray(target_matrix).ravel().transpose())
     return svr_lin
 
-
 def train_model():
     training_issues_hash = get_all_training_issues()
     model_hash = {}
