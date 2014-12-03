@@ -141,6 +141,7 @@ def test_classifier_model(model, design_matrix, target_matrix, test_design_matri
     print "Error percentage (Testing):"
     print num_test_errors / len(test_target_array)
     print
+    return num_errors / len(target_array), num_test_errors / len(test_target_array)
 
 def train_model():
     training_issues_hash = get_all_training_issues()
@@ -159,7 +160,39 @@ def test_features(issue_tag, features):
     model,design_matrix, target_matrix = build_classifier_model(train_issues, tag)
     test_design_matrix,test_target_matrix = combine_design_matrices(test_issues, tag)
     test_target_matrix = convert_to_binary_target(test_target_matrix)
-    test_classifier_model(model, design_matrix, target_matrix, test_design_matrix, test_target_matrix)
+    train_error, test_error = test_classifier_model(model, design_matrix, target_matrix, test_design_matrix, test_target_matrix)
+    return train_error, test_error
 
-features = ["HC02_EST_VC04", "HC02_EST_VC06", "HC02_EST_VC07"]
-test_features('infra', features)
+def load_features():
+    with open("features.txt", "rb") as file:
+        contents = file.readline().strip()
+        features = contents.split(",")
+        return features
+
+def brute_force_features():
+    all_features = load_features()
+    best = []
+    test_error = float("inf")
+    for i in range(20, 21):
+        for j in range(20):
+            features = random.sample(all_features, i)
+            avg = 0.0
+            k = 10
+            while k > 0:
+                try:
+                    train, test = test_features('infra', features)
+                    avg += test
+                    k -= 1
+                except:
+                    features = random.sample(all_features, i)
+                    k = 10
+            avg /= 10.0
+            if avg < test_error:
+                best = features
+                test_error = avg
+    print "Best features:"
+    print best
+    print "Best test error:"
+    print test_error
+
+brute_force_features()
