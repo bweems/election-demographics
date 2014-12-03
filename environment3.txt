@@ -1,0 +1,856 @@
+HC02_EST_VC02
+Number of errors (Testing):
+35.0
+Error percentage (Testing):
+0.4375
+
+Number of errors (Testing):
+55.0
+Error percentage (Testing):
+0.6875
+
+Number of errors (Testing):
+45.0
+Error percentage (Testing):
+0.5625
+
+Number of errors (Testing):
+56.0
+Error percentage (Testing):
+0.7
+
+Number of errors (Testing):
+40.0
+Error percentage (Testing):
+0.5
+
+TestingError: 0.5775
+TrainingError: 0.19
+HC02_EST_VC03
+Number of errors (Testing):
+34.0
+Error percentage (Testing):
+0.425
+
+Number of errors (Testing):
+49.0
+Error percentage (Testing):
+0.6125
+
+Number of errors (Testing):
+27.0
+Error percentage (Testing):
+0.3375
+
+Number of errors (Testing):
+47.0
+Error percentage (Testing):
+0.5875
+
+Number of errors (Testing):
+30.0
+Error percentage (Testing):
+0.375
+
+TestingError: 0.4675
+TrainingError: 0.321666666667
+HC02_EST_VC04
+Number of errors (Testing):
+50.0
+Error percentage (Testing):
+0.625
+
+Number of errors (Testing):
+33.0
+Error percentage (Testing):
+0.4125
+
+Number of errors (Testing):
+24.0
+Error percentage (Testing):
+0.3
+
+Number of errors (Testing):
+46.0
+Error percentage (Testing):
+0.575
+
+Number of errors (Testing):
+46.0
+Error percentage (Testing):
+0.575
+
+TestingError: 0.4975
+TrainingError: 0.301666666667
+HC02_EST_VC05
+Number of errors (Testing):
+35.0
+Error percentage (Testing):
+0.4375
+
+Number of errors (Testing):
+26.0
+Error percentage (Testing):
+0.325
+
+Number of errors (Testing):
+29.0
+Error percentage (Testing):
+0.3625
+
+Number of errors (Testing):
+25.0
+Error percentage (Testing):
+0.3125
+
+Number of errors (Testing):
+50.0
+Error percentage (Testing):
+0.625
+
+TestingError: 0.4125
+TrainingError: 0.33
+HC02_EST_VC06
+Number of errors (Testing):
+46.0
+Error percentage (Testing):
+0.575
+
+Number of errors (Testing):
+34.0
+Error percentage (Testing):
+0.425
+
+Number of errors (Testing):
+66.0
+Error percentage (Testing):
+0.825
+
+Number of errors (Testing):
+33.0
+Error percentage (Testing):
+0.4125
+
+Number of errors (Testing):
+46.0
+Error percentage (Testing):
+0.575
+
+TestingError: 0.5625
+TrainingError: 0.3
+HC02_EST_VC07
+Number of errors (Testing):
+66.0
+Error percentage (Testing):
+0.825
+
+Number of errors (Testing):
+50.0
+Error percentage (Testing):
+0.625
+
+Number of errors (Testing):
+19.0
+Error percentage (Testing):
+0.2375
+
+Number of errors (Testing):
+32.0
+Error percentage (Testing):
+0.4
+
+Number of errors (Testing):
+23.0
+Error percentage (Testing):
+0.2875
+
+TestingError: 0.475
+TrainingError: 0.3375
+HC02_EST_VC08
+Number of errors (Testing):
+45.0
+Error percentage (Testing):
+0.5625
+
+Number of errors (Testing):
+42.0
+Error percentage (Testing):
+0.525
+
+Number of errors (Testing):
+42.0
+Error percentage (Testing):
+0.525
+
+Number of errors (Testing):
+16.0
+Error percentage (Testing):
+0.2
+
+Number of errors (Testing):
+21.0
+Error percentage (Testing):
+0.2625
+
+TestingError: 0.415
+TrainingError: 0.35
+HC02_EST_VC09
+Number of errors (Testing):
+29.0
+Error percentage (Testing):
+0.3625
+
+Number of errors (Testing):
+22.0
+Error percentage (Testing):
+0.275
+
+Number of errors (Testing):
+27.0
+Error percentage (Testing):
+0.3375
+
+Number of errors (Testing):
+29.0
+Error percentage (Testing):
+0.3625
+
+Number of errors (Testing):
+45.0
+Error percentage (Testing):
+0.5625
+
+TestingError: 0.38
+TrainingError: 0.343333333333
+HC02_EST_VC10
+Number of errors (Testing):
+19.0
+Error percentage (Testing):
+0.2375
+
+Number of errors (Testing):
+41.0
+Error percentage (Testing):
+0.5125
+
+Number of errors (Testing):
+19.0
+Error percentage (Testing):
+0.2375
+
+Number of errors (Testing):
+48.0
+Error percentage (Testing):
+0.6
+
+Number of errors (Testing):
+16.0
+Error percentage (Testing):
+0.2
+
+TestingError: 0.3575
+TrainingError: 0.358333333333
+HC02_EST_VC11
+Number of errors (Testing):
+43.0
+Error percentage (Testing):
+0.5375
+
+Number of errors (Testing):
+35.0
+Error percentage (Testing):
+0.4375
+
+Number of errors (Testing):
+30.0
+Error percentage (Testing):
+0.375
+
+Number of errors (Testing):
+27.0
+Error percentage (Testing):
+0.3375
+
+Number of errors (Testing):
+32.0
+Error percentage (Testing):
+0.4
+
+TestingError: 0.4175
+TrainingError: 0.329166666667
+HC02_EST_VC12
+Number of errors (Testing):
+64.0
+Error percentage (Testing):
+0.8
+
+Number of errors (Testing):
+48.0
+Error percentage (Testing):
+0.6
+
+Number of errors (Testing):
+24.0
+Error percentage (Testing):
+0.3
+
+Number of errors (Testing):
+45.0
+Error percentage (Testing):
+0.5625
+
+Number of errors (Testing):
+35.0
+Error percentage (Testing):
+0.4375
+
+TestingError: 0.54
+TrainingError: 0.275
+HC02_EST_VC13
+Number of errors (Testing):
+45.0
+Error percentage (Testing):
+0.5625
+
+Number of errors (Testing):
+47.0
+Error percentage (Testing):
+0.5875
+
+Number of errors (Testing):
+45.0
+Error percentage (Testing):
+0.5625
+
+Number of errors (Testing):
+22.0
+Error percentage (Testing):
+0.275
+
+Number of errors (Testing):
+24.0
+Error percentage (Testing):
+0.3
+
+TestingError: 0.4575
+TrainingError: 0.355833333333
+HC02_EST_VC14
+Number of errors (Testing):
+44.0
+Error percentage (Testing):
+0.55
+
+Number of errors (Testing):
+29.0
+Error percentage (Testing):
+0.3625
+
+Number of errors (Testing):
+51.0
+Error percentage (Testing):
+0.6375
+
+Number of errors (Testing):
+31.0
+Error percentage (Testing):
+0.3875
+
+Number of errors (Testing):
+30.0
+Error percentage (Testing):
+0.375
+
+TestingError: 0.4625
+TrainingError: 0.33
+HC02_EST_VC15
+Number of errors (Testing):
+27.0
+Error percentage (Testing):
+0.3375
+
+Number of errors (Testing):
+46.0
+Error percentage (Testing):
+0.575
+
+Number of errors (Testing):
+34.0
+Error percentage (Testing):
+0.425
+
+Number of errors (Testing):
+26.0
+Error percentage (Testing):
+0.325
+
+Number of errors (Testing):
+32.0
+Error percentage (Testing):
+0.4
+
+TestingError: 0.4125
+TrainingError: 0.355833333333
+HC02_EST_VC16
+HC02_EST_VC17
+HC02_EST_VC19
+Number of errors (Testing):
+23.0
+Error percentage (Testing):
+0.2875
+
+Number of errors (Testing):
+47.0
+Error percentage (Testing):
+0.5875
+
+Number of errors (Testing):
+31.0
+Error percentage (Testing):
+0.3875
+
+Number of errors (Testing):
+29.0
+Error percentage (Testing):
+0.3625
+
+Number of errors (Testing):
+35.0
+Error percentage (Testing):
+0.4375
+
+TestingError: 0.4125
+TrainingError: 0.24
+HC02_EST_VC20
+Number of errors (Testing):
+29.0
+Error percentage (Testing):
+0.3625
+
+Number of errors (Testing):
+34.0
+Error percentage (Testing):
+0.425
+
+Number of errors (Testing):
+34.0
+Error percentage (Testing):
+0.425
+
+Number of errors (Testing):
+29.0
+Error percentage (Testing):
+0.3625
+
+Number of errors (Testing):
+27.0
+Error percentage (Testing):
+0.3375
+
+TestingError: 0.3825
+TrainingError: 0.378333333333
+HC02_EST_VC21
+Number of errors (Testing):
+33.0
+Error percentage (Testing):
+0.4125
+
+Number of errors (Testing):
+42.0
+Error percentage (Testing):
+0.525
+
+Number of errors (Testing):
+27.0
+Error percentage (Testing):
+0.3375
+
+Number of errors (Testing):
+22.0
+Error percentage (Testing):
+0.275
+
+Number of errors (Testing):
+27.0
+Error percentage (Testing):
+0.3375
+
+TestingError: 0.3775
+TrainingError: 0.3525
+HC02_EST_VC22
+Number of errors (Testing):
+35.0
+Error percentage (Testing):
+0.4375
+
+Number of errors (Testing):
+43.0
+Error percentage (Testing):
+0.5375
+
+Number of errors (Testing):
+34.0
+Error percentage (Testing):
+0.425
+
+Number of errors (Testing):
+22.0
+Error percentage (Testing):
+0.275
+
+Number of errors (Testing):
+32.0
+Error percentage (Testing):
+0.4
+
+TestingError: 0.415
+TrainingError: 0.33
+HC02_EST_VC23
+Number of errors (Testing):
+46.0
+Error percentage (Testing):
+0.575
+
+Number of errors (Testing):
+23.0
+Error percentage (Testing):
+0.2875
+
+Number of errors (Testing):
+23.0
+Error percentage (Testing):
+0.2875
+
+Number of errors (Testing):
+33.0
+Error percentage (Testing):
+0.4125
+
+Number of errors (Testing):
+29.0
+Error percentage (Testing):
+0.3625
+
+TestingError: 0.385
+TrainingError: 0.3675
+HC02_EST_VC24
+Number of errors (Testing):
+26.0
+Error percentage (Testing):
+0.325
+
+Number of errors (Testing):
+31.0
+Error percentage (Testing):
+0.3875
+
+Number of errors (Testing):
+43.0
+Error percentage (Testing):
+0.5375
+
+Number of errors (Testing):
+65.0
+Error percentage (Testing):
+0.8125
+
+Number of errors (Testing):
+26.0
+Error percentage (Testing):
+0.325
+
+TestingError: 0.4775
+TrainingError: 0.324166666667
+HC02_EST_VC25
+Number of errors (Testing):
+23.0
+Error percentage (Testing):
+0.2875
+
+Number of errors (Testing):
+47.0
+Error percentage (Testing):
+0.5875
+
+Number of errors (Testing):
+18.0
+Error percentage (Testing):
+0.225
+
+Number of errors (Testing):
+11.0
+Error percentage (Testing):
+0.1375
+
+Number of errors (Testing):
+14.0
+Error percentage (Testing):
+0.175
+
+TestingError: 0.2825
+TrainingError: 0.409166666667
+HC02_EST_VC27
+Number of errors (Testing):
+35.0
+Error percentage (Testing):
+0.4375
+
+Number of errors (Testing):
+51.0
+Error percentage (Testing):
+0.6375
+
+Number of errors (Testing):
+55.0
+Error percentage (Testing):
+0.6875
+
+Number of errors (Testing):
+35.0
+Error percentage (Testing):
+0.4375
+
+Number of errors (Testing):
+40.0
+Error percentage (Testing):
+0.5
+
+TestingError: 0.54
+TrainingError: 0.213333333333
+HC02_EST_VC28
+Number of errors (Testing):
+18.0
+Error percentage (Testing):
+0.225
+
+Number of errors (Testing):
+52.0
+Error percentage (Testing):
+0.65
+
+Number of errors (Testing):
+20.0
+Error percentage (Testing):
+0.25
+
+Number of errors (Testing):
+25.0
+Error percentage (Testing):
+0.3125
+
+Number of errors (Testing):
+51.0
+Error percentage (Testing):
+0.6375
+
+TestingError: 0.415
+TrainingError: 0.325833333333
+HC02_EST_VC29
+Number of errors (Testing):
+45.0
+Error percentage (Testing):
+0.5625
+
+Number of errors (Testing):
+22.0
+Error percentage (Testing):
+0.275
+
+Number of errors (Testing):
+15.0
+Error percentage (Testing):
+0.1875
+
+Number of errors (Testing):
+19.0
+Error percentage (Testing):
+0.2375
+
+Number of errors (Testing):
+48.0
+Error percentage (Testing):
+0.6
+
+TestingError: 0.3725
+TrainingError: 0.348333333333
+HC02_EST_VC30
+Number of errors (Testing):
+21.0
+Error percentage (Testing):
+0.2625
+
+Number of errors (Testing):
+31.0
+Error percentage (Testing):
+0.3875
+
+Number of errors (Testing):
+19.0
+Error percentage (Testing):
+0.2375
+
+Number of errors (Testing):
+18.0
+Error percentage (Testing):
+0.225
+
+Number of errors (Testing):
+21.0
+Error percentage (Testing):
+0.2625
+
+TestingError: 0.275
+TrainingError: 0.404166666667
+HC02_EST_VC31
+Number of errors (Testing):
+43.0
+Error percentage (Testing):
+0.5375
+
+Number of errors (Testing):
+22.0
+Error percentage (Testing):
+0.275
+
+Number of errors (Testing):
+48.0
+Error percentage (Testing):
+0.6
+
+Number of errors (Testing):
+13.0
+Error percentage (Testing):
+0.1625
+
+Number of errors (Testing):
+14.0
+Error percentage (Testing):
+0.175
+
+TestingError: 0.35
+TrainingError: 0.404166666667
+HC02_EST_VC32
+Number of errors (Testing):
+50.0
+Error percentage (Testing):
+0.625
+
+Number of errors (Testing):
+50.0
+Error percentage (Testing):
+0.625
+
+Number of errors (Testing):
+18.0
+Error percentage (Testing):
+0.225
+
+Number of errors (Testing):
+45.0
+Error percentage (Testing):
+0.5625
+
+Number of errors (Testing):
+43.0
+Error percentage (Testing):
+0.5375
+
+TestingError: 0.515
+TrainingError: 0.318333333333
+HC02_EST_VC33
+Number of errors (Testing):
+19.0
+Error percentage (Testing):
+0.2375
+
+Number of errors (Testing):
+29.0
+Error percentage (Testing):
+0.3625
+
+Number of errors (Testing):
+35.0
+Error percentage (Testing):
+0.4375
+
+Number of errors (Testing):
+14.0
+Error percentage (Testing):
+0.175
+
+Number of errors (Testing):
+33.0
+Error percentage (Testing):
+0.4125
+
+TestingError: 0.325
+TrainingError: 0.259166666667
+HC02_EST_VC34
+Number of errors (Testing):
+34.0
+Error percentage (Testing):
+0.425
+
+Number of errors (Testing):
+17.0
+Error percentage (Testing):
+0.2125
+
+Number of errors (Testing):
+21.0
+Error percentage (Testing):
+0.2625
+
+Number of errors (Testing):
+24.0
+Error percentage (Testing):
+0.3
+
+Number of errors (Testing):
+30.0
+Error percentage (Testing):
+0.375
+
+TestingError: 0.315
+TrainingError: 0.350833333333
+HC02_EST_VC35
+Number of errors (Testing):
+21.0
+Error percentage (Testing):
+0.2625
+
+Number of errors (Testing):
+27.0
+Error percentage (Testing):
+0.3375
+
+Number of errors (Testing):
+31.0
+Error percentage (Testing):
+0.3875
+
+Number of errors (Testing):
+34.0
+Error percentage (Testing):
+0.425
+
+Number of errors (Testing):
+25.0
+Error percentage (Testing):
+0.3125
+
+TestingError: 0.345
+TrainingError: 0.341666666667
+HC02_EST_VC36
+Number of errors (Testing):
+44.0
+Error percentage (Testing):
+0.55
+
+Number of errors (Testing):
+29.0
+Error percentage (Testing):
+0.3625
+
+Number of errors (Testing):
+23.0
+Erro
