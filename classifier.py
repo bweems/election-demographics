@@ -142,13 +142,10 @@ def test_classifier_model(model, design_matrix, target_matrix, test_design_matri
     print num_test_errors / len(test_target_array)
     print
 
-
 def train_model():
     training_issues_hash = get_all_training_issues()
     model_hash = {}
     tag = { "name": "DiscoShit", "type": "Percent", "demographics": [26] }
-
-
 
 def test_features():
     training_issues_hash = get_all_training_issues()
