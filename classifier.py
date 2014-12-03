@@ -154,8 +154,10 @@ def test_features(issue_tag, features):
     test_size = len(train_issues) / 3
     random.shuffle(train_issues)
     test_issues = []
+
     for i in range(test_size):
         test_issues.append(train_issues.pop())
+
     tag = { "name": "DiscoShit", "type": "Percent", "demographics": features }
     model,design_matrix, target_matrix = build_classifier_model(train_issues, tag)
     test_design_matrix,test_target_matrix = combine_design_matrices(test_issues, tag)
