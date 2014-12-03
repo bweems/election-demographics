@@ -22,7 +22,6 @@ def modify_demographics(demographics, year):
     return new_dem_array
 
 def construct_submatrix(year, demographics, county, prop, type, polarity):
-
     demographics = modify_demographics(demographics, year)
 
     voting_data = voting.get_voting_data()
