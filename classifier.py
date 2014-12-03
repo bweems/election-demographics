@@ -152,7 +152,7 @@ def train_model():
 
 def test_features():
     training_issues_hash = get_all_training_issues()
-    train_issues = training_issues_hash['crime']
+    train_issues = training_issues_hash['infra']
     random.shuffle(train_issues)
     test_issues = []
     test_issues.append(train_issues.pop())
