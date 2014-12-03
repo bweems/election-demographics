@@ -120,12 +120,12 @@ def test_classifier_model(model, design_matrix, target_matrix, test_design_matri
             # print design_matrix[i]
             # print np.array(target_array[i])
             # print
-    print
-    print "Number of errors (Training):"
-    print num_errors
-    print "Error percentage (Training):"
-    print num_errors / len(target_array)
-    print
+    # print
+    # print "Number of errors (Training):"
+    # print num_errors
+    # print "Error percentage (Training):"
+    # print num_errors / len(target_array)
+    # print
 
     num_test_errors = 0.0
     test_target_array = np.asarray(test_target_matrix).ravel()
@@ -136,31 +136,60 @@ def test_classifier_model(model, design_matrix, target_matrix, test_design_matri
             # print np.array(test_target_array[i])
             # print
 
-    print "Number of errors (Testing):"
-    print num_test_errors
-    print "Error percentage (Testing):"
-    print num_test_errors / len(test_target_array)
-    print
-    return num_errors / len(target_array), num_test_errors / len(test_target_array)
+    # print "Number of errors (Testing):"
+    # print num_test_errors
+    # print "Error percentage (Testing):"
+    # print num_test_errors / len(test_target_array)
+    # print
+
+    return (num_errors / len(target_array)), (num_test_errors / len(test_target_array))
 
 def train_model():
     training_issues_hash = get_all_training_issues()
     model_hash = {}
     tag = { "name": "DiscoShit", "type": "Percent", "demographics": [26] }
 
+
+def loop_test_features():
+
+    features = ["HC02_EST_VC129","HC02_EST_VC120", "HC02_EST_VC73", "HC02_EST_VC108", "HC02_EST_VC68"]
+
+    total_training = 0.0
+    total_test = 0.0
+    num_iters = 1
+    for i in range(num_iters):
+        train_error, test_error = test_features('politics', features)
+        total_training += train_error
+        total_test += test_error
+
+    print 
+    print "Training Error:"
+    print total_training / num_iters
+    print "Testing Error:"
+    print total_test / num_iters
+    print
+
+
+# Gambling features: 
+
+
 def test_features(issue_tag, features):
     training_issues_hash = get_all_training_issues()
     train_issues = training_issues_hash[issue_tag]
     test_size = len(train_issues) / 3
     random.shuffle(train_issues)
-    test_issues = []
+
+    test_issues = []    
+
     for i in range(test_size):
         test_issues.append(train_issues.pop())
+
     tag = { "name": "DiscoShit", "type": "Percent", "demographics": features }
     model,design_matrix, target_matrix = build_classifier_model(train_issues, tag)
     test_design_matrix,test_target_matrix = combine_design_matrices(test_issues, tag)
     test_target_matrix = convert_to_binary_target(test_target_matrix)
     train_error, test_error = test_classifier_model(model, design_matrix, target_matrix, test_design_matrix, test_target_matrix)
+
     return train_error, test_error
 
 def load_features():
