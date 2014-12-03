@@ -195,4 +195,18 @@ def brute_force_features():
     print "Best test error:"
     print test_error
 
-brute_force_features()
+def aggregate_test_features(tag, features):
+    N = 20
+    total_train = 0.0
+    total_test = 0.0
+    for i in range(N):
+        train, test = test_features(tag, features)
+        total_train += train
+        total_test += test
+    print "Training error:"
+    print total_train / N
+    print "Test error:"
+    print total_test / N
+
+features = []
+aggregate_test_features("infra", features)
