@@ -237,5 +237,5 @@ def aggregate_test_features(tag, features):
     print "Test error:"
     print total_test / N
 
-features = []
-aggregate_test_features("infra", features)
+features = ["HC02_EST_VC04", "HC02_EST_VC40", "HC02_EST_VC75"]
+aggregate_test_features("crime", features)
