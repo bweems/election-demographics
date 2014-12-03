@@ -147,19 +147,19 @@ def train_model():
     model_hash = {}
     tag = { "name": "DiscoShit", "type": "Percent", "demographics": [26] }
 
-def test_features():
+def test_features(issue_tag, features):
     training_issues_hash = get_all_training_issues()
-    train_issues = training_issues_hash['corporate']
+    train_issues = training_issues_hash[issue_tag]
+    test_size = len(train_issues) / 3
     random.shuffle(train_issues)
     test_issues = []
-    test_issues.append(train_issues.pop())
-    test_issues.append(train_issues.pop())
-    features = ["HC02_EST_VC04", "HC02_EST_VC06", "HC02_EST_VC07"]
+    for i in range(test_size):
+        test_issues.append(train_issues.pop())
     tag = { "name": "DiscoShit", "type": "Percent", "demographics": features }
-    
     model,design_matrix, target_matrix = build_classifier_model(train_issues, tag)
     test_design_matrix,test_target_matrix = combine_design_matrices(test_issues, tag)
     test_target_matrix = convert_to_binary_target(test_target_matrix)
     test_classifier_model(model, design_matrix, target_matrix, test_design_matrix, test_target_matrix)
 
-test_features()
+features = ["HC02_EST_VC04", "HC02_EST_VC06", "HC02_EST_VC07"]
+test_features('infra', features)
