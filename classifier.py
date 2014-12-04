@@ -3,6 +3,7 @@ import random
 import numpy as np
 import voting
 import demographic
+import threading
 from sklearn import svm
 from sklearn.cluster import KMeans
 from sklearn.svm import SVR
@@ -249,8 +250,8 @@ testingErrors = []
 enviroFeatures = ["HC02_EST_VC04","HC02_EST_VC08","HC02_EST_VC29","HC02_EST_VC31","HC02_EST_VC40","HC02_EST_VC49","HC02_EST_VC68","HC02_EST_VC70",]
 crimeFeatures = ["HC02_EST_VC21","HC02_EST_VC25","HC02_EST_VC28","HC02_EST_VC29","HC02_EST_VC30","HC02_EST_VC61","HC02_EST_VC67","HC02_EST_VC68","HC02_EST_VC73","HC02_EST_VC104","HC02_EST_VC108","HC02_EST_VC114","HC02_EST_VC119","HC02_EST_VC121","HC02_EST_VC130","HC02_EST_VC137","HC02_EST_VC139","HC02_EST_VC149","HC02_EST_VC154","HC02_EST_VC164"]
 societyFeatures = ["HC02_EST_VC25","HC02_EST_VC118"]
-NUM_ITERS = 1
-NUM_BASE_ITERS = 1
+NUM_ITERS = 10
+NUM_BASE_ITERS = 100
 MAX_FEATURE_VECTOR_LENGTH = 10
 
 def get_testing_error(tag, features, NUM_ITERS):
@@ -258,7 +259,7 @@ def get_testing_error(tag, features, NUM_ITERS):
     for i in range(NUM_ITERS):
         new_training_error, new_testing_error = test_features(tag, features)
         testingError += new_testing_error
-    print "TestingError: " + str(testingError/NUM_ITERS)
+    # print "TestingError: " + str(testingError/NUM_ITERS)
     return testingError/NUM_ITERS
 
 def find_best_features(tag, baseline_testing_error, features):
@@ -266,30 +267,70 @@ def find_best_features(tag, baseline_testing_error, features):
     for feature in features:
         if feature[:8] == "HC02_EST":
             try:
-                print feature
+                # print feature
                 testingError = get_testing_error(tag, [feature], NUM_ITERS)
                 if testingError/NUM_ITERS < baseline_testing_error:
                     bestFeatures.append(feature)
             except ValueError, KeyError:
                 pass
-    print "Best Features Length: %s" % (len(bestFeatures))
+    # print "Best Features Length: %s" % (len(bestFeatures))
     if len(bestFeatures) > MAX_FEATURE_VECTOR_LENGTH:
         bestFeatures = find_best_features(tag, baseline_testing_error, bestFeatures)
     elif len(bestFeatures) == 0:
         bestFeatures = ["HC02_EST_VC02"]
     return bestFeatures
 
+def tag_feature_selector(tag):
+    print tag
+    baseline_testing_error = get_testing_error(tag, ['HC02_EST_VC02'], NUM_BASE_ITERS)
+    # print "Baseline Testing Error: %s" % (baseline_testing_error)
+    best_features = find_best_features(tag, baseline_testing_error, all_features)
+    testingError = 0
+    for i in range(NUM_ITERS * 10):
+        new_training_error, new_testing_error = test_features(tag, best_features)
+        testingError += new_testing_error
+    testing_error = testingError/(NUM_ITERS*10)
+    print "Tag: %s \n Features: %s \n TestingError: %s \t Baseline Testing Error: %s" % (tag, best_features, testing_error, baseline_testing_error) 
+
 def run_feature_selector():
     for tag in issues:
-        print tag
-        baseline_testing_error = get_testing_error(tag, ['HC02_EST_VC02'], NUM_BASE_ITERS)
-        print "Baseline Testing Error: %s" % (baseline_testing_error)
-        best_features = find_best_features(tag, baseline_testing_error, all_features)
-        testingError = 0
-        for i in range(NUM_ITERS * 10):
-            new_training_error, new_testing_error = test_features(tag, best_features)
-            testingError += new_testing_error
-        testing_error = testingError/(NUM_ITERS*10)
-        print "Tag: %s \n Features: %s \n TestingError: %s \t Baseline Testing Error: %s" % (tag, best_features, testing_error, baseline_testing_error) 
+        t = threading.Thread(target=tag_feature_selector, args = (tag))
+        t.daemon = True
+        t.start()
 
-run_feature_selector()
+class FeatureSelectorThread(threading.Thread):
+
+    def __init__(self,tag):
+        super(FeatureSelectorThread, self).__init__()
+        self.tag = tag
+
+    def run(self):
+        tag_feature_selector(self.tag)
+
+
+thread1 = FeatureSelectorThread('crime')
+thread2 = FeatureSelectorThread('education')
+thread3 = FeatureSelectorThread('infra')
+thread4 = FeatureSelectorThread('environment')
+thread5 = FeatureSelectorThread('gambling')
+thread6 = FeatureSelectorThread('society')
+thread7 = FeatureSelectorThread('politics')
+thread8 = FeatureSelectorThread('corporate')
+thread1.start()
+thread2.start()
+thread3.start()
+thread4.start()
+thread5.start()
+thread6.start()
+thread7.start()
+thread8.start()
+thread1.join()
+thread2.join()
+thread3.join()
+thread4.join()
+thread5.join()
+thread6.join()
+thread7.join()
+thread8.join()
+
+# run_feature_selector()
