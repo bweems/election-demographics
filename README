@@ -1,0 +1,95 @@
+File: README
+This file.
+
+File: Proposition Labels.csv
+This file puts each proposition into an issue bucket (i.e. "politics").
+Used by the classifier to determine issue tag groupings.
+
+File: demographic.py
+This file contains helper methods to obtain and manage demographic data from
+the demographic files (ACS_1YR_...csv).
+
+    average_data(file, dem):
+    Averages the county data for a given demographic. Useful for situations
+    when we really want to use a feature but there isn't sufficient data for
+    the census to output an actual prediction - in these cases, we average the
+    data for that demographic across all counties and use it instead.
+
+    construct_submatrix(year, demographics, county, prop, type, polarity):
+    Builds a county-specific design matrix and test matrix for a given year, a
+    given proposition and polarity, and given demographic data. Called in a
+    loop by compose_design_matrix over all counties for an issue. Returns 
+    design and target matrices.
+
+File: features.txt
+This file contains all feature identifiers as ordained by the US Census Bureau.
+
+File: read2014.py
+2014 election results were unavailable from the CA Secretary of State website.
+We had to use a gnarly JSON file from the Contra Costa Times website; this file
+basically converts that JSON into the standard election data format we used.
+
+File: voting.py
+This file contains helper methods to obtain and manage voting data from the
+election files ({YEAR}BallotMod.csv).
+
+    get_voting_data():
+    This method reads in election data for each year we have data for, and
+    returns a mapping that allows one to look up voting results based on year,
+    proposition, polarity, county, and vote type (absolute or percent).
+
+File: classifier.py
+This file contains our classifier and helper functions for it.
+
+    multithreaded_feature_finder():
+    Creates a thread to find the best features for each tag.  Runs them in parallel.
+
+    tag_feature_selector():
+    Selects features for each tag by finding the best features and the testing error
+
+    find_best_features(tag, baseline_testing_error, features):
+    Chooses 10 or fewer features which are better than the baseline of a given tag.
+
+    get_testing_error(tag, features, numIters):
+    Averages the testingError over numIters runs of test_features.
+
+    test_features(issue_tag, features): 
+    Creates a training set and test set (from propositions contained in
+    issue_tag), runs the classifier with given features and returns the
+    train and test errors.
+
+    test_classifier_model(model, design, target, test_design, test_target, train):
+    Generates a percent error by comparing the model's predictions to the results 
+    of the test set. Called by test_features to test accuracy.
+
+    build_classifier_model(issues, tag):
+    Generates a model using SVC with an RBF kernel (with features specified by
+    tag) which trains on the training set provided by test_classifier_model.
+
+    get_all_training_issues():
+    Hashes the issues into buckets according to our labels, as specified by the
+    Proposition Labels csv file.
+
+    is_number(s):
+    Confirms that s is a number. Useful for identifying features for which no
+    data is available (the letter "N" is used as a placeholder)
+
+    convert_to_binary_target(targetMatrix):
+    Converts the target matrix into a binary matrix using basic zero-one
+    thresholding. This matrix can be used to train and test an SVC model.
+
+    zero_or_one(number):
+    If the result is greater than 50, returns 1, else returns 0. Used by
+    convert_to_binary_target to make a binary target matrix.
+
+    combine_design_matrices(issues, tag):
+    Compiles the design matrices into a single design matrix.
+    Compiles the target matrices into a single target matrix.
+    Calls compose_design_matrix on each issue in the given issue tag.
+
+    compose_design_matrix(issue, tag):
+    Generates a design matrix for a single issue and tag (the tag specifies
+    what features should be put into the design matrix)
+
+Commands to Run:
+    
