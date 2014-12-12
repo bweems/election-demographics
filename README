@@ -1,10 +1,6 @@
 File: README
 This file.
 
-File: Proposition Labels.csv
-This file puts each proposition into an issue bucket (i.e. "politics").
-Used by the classifier to determine issue tag groupings.
-
 File: demographic.py
 This file contains helper methods to obtain and manage demographic data from
 the demographic files (ACS_1YR_...csv).
@@ -23,6 +19,10 @@ the demographic files (ACS_1YR_...csv).
 
 File: features.txt
 This file contains all feature identifiers as ordained by the US Census Bureau.
+
+File: Proposition Labels.csv
+This file puts each proposition into an issue bucket (i.e. "politics").
+Used by the classifier to determine issue tag groupings.
 
 File: read2014.py
 2014 election results were unavailable from the CA Secretary of State website.
